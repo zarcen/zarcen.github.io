@@ -11,12 +11,12 @@
         <title>Wei-Chen Chen (zarcen)</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="./dist/css/bootstrap.css" rel="stylesheet">
+        <link href="./dist/css/bootstrap.css" rel="stylesheet" media="screen">
         <!-- Bootstrap theme -->
         <link href="./dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="theme.css" rel="stylesheet">
+        <link href="theme.css" rel="stylesheet">j
 
         <!-- Just for debugging purposes. Don't actually copy this line! -->
         <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -51,7 +51,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">zarcen.github.io</a>
+                    <a class="navbar-brand" href="#" data-toggle="tab">zarcen.github.io</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <div class="container theme-showcase">
+        <div class="container">
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="about">
                     <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -85,18 +85,25 @@
                         <div class="row">
                             <div class="col-lg-8">
                                 <h2>About Me</h2>
-                                Hi, I am Wei-Chen Chen (zarcen)</p>
-                                <p>I am originally from Taipei, Taiwan.
-                                I received my B.S. in computer science from <a target="_blank" href="http://www.csie.ntu.edu.tw/main.php">National Taiwan University</a> in 2011.</p>
-                                <p>My research interests include human-computer interactions, ubiquitous computing, and machine learning. 
-                                I have joined Smart Home Group of NTU Intelligent Robut Lab and worked with 
+                                <p>Hi, I am Wei-Chen Chen (zarcen). I am a system developer.</p>
+                                <p>
+                                I am originally from Taipei, Taiwan.
+                                I received my B.S. in computer science from <a target="_blank" href="http://www.csie.ntu.edu.tw/main.php">National Taiwan University</a>
+                                in 2011.
+                                </p>
+                                <p>
+                                My research interests include human-computer interactions, ubiquitous computing, and machine learning. 
+                                I have worked in Smart Home Group of NTU Intelligent Robut Lab and been advised by
                                 <a target="_blank" href="http://robotlab.csie.ntu.edu.tw/doku.php?id=%E5%82%85%E7%AB%8B%E6%88%90">Prof. Li-Chen Fu</a> 
-                                since 2010, currently working as research assistant in Intel-NTU Center.</p>
+                                since 2010, currently working as research assistant in Intel-NTU Center.
+                                My current research includes cloud-enabled context-aware system, user-interaction designing, and context summarization.
+                                </p>
                             </div>
                             <div class="col-lg-4">
                                 <h2>Contact Me</h2>
                                 <p>Email: zarcen [at] gmail.com&nbsp;<a href="mailto:zarcen@gmail.com"><img src="./image/gmail.png" width=30 height=30></img></a></p>
                                 <p>Skype: zarcenchen&nbsp;<img src="./image/skype.jpeg" width=30 height=30></img></p>
+                                <p>Github Repos: zarcen&nbsp;<a href="https://github.com/zarcen"><img src="./image/github.png" width=30 height=30></img></a></p>
                                 <p><img src="./image/profile2.png" class="img-thumbnail" alt="Wei Chen Photo" align="left" height="200" width="150"> 
                             </div>
                         </div>
@@ -104,29 +111,73 @@
                 </div>
 
                 <!-- CV tab page -->
-                <div class="tab-pane fade" id="cv">
+                <div class="tab-pane fade" id="cv"> 
                     <div class="row">
-                        <div class="span3">
-                            <ul class="nav nav-list bs-docs-sidenav">
-                                <li><a href="#curriculum_vitae"><i class="icon-chevron-right"></i> Curriculum Vitae </a></li>
-                                <li><a href="#education"><i class="icon-chevron-right"></i> Education </a></li>
-                            </ul>
+                        <div class="col-md-3">
+                            <div id="side-nav" class="list-group nav affix">
+                                <li><a href="#pdf_cv" class="list-group-item">PDF CV</a></li>
+                                <li><a href="#education" class="list-group-item">Education</a></li>
+                                <li><a href="#skills" class="list-group-item">Skills</a></li>
+                                <li><a href="#research_experience" class="list-group-item">Research Experience</a></li>
+                                <li><a href="#research_project" class="list-group-item">Research Project</a></li>
+                            </div>
+                        </div><!-- /.col-md-3 -->
+                        <div class="col-md-9">
+                            <div id="pdf_cv" class="page-header">
+                                <h3>Curriculum Vitae</h3>
+                            </div>
+                            <dl class="dl-horizontal">
+                                <dt><a href="./cv.pdf">Full CV in PDF</a></dt>
+                                <dd></dd>
+                            </dl>
+
+                            <div id="education" class="page-header">
+                                <h3>Education</h3>
+                            </div>
+                            <dl class="dl-horizontal">
+                                <dt><em>2007 ~ 2011</em></dt>
+                                <dd>National Taiwan University, Taipei, Taiwan</dd>
+                                <dd><small>Bachelor of Science, Computer Science and Information Engineering</small></dd>
+                            </dl>
+
+                            <div id="skills" class="page-header">
+                                <h3>Skills</h3>
+                            </div>
+                            <dl class="dl-horizontal">
+                                <dt><em>Programming</em></dt>
+                                <dd>C, C++, Java, Python, Ruby</dd>
+                                <dt><em>Web</em></dt>
+                                <dd>Javascript, jQuery, JSP, HTML/CSS</dd>
+                            </dl>
+
+                            <div id="research_experience" class="page-header">
+                                <h3>Research Experience</h3>
+                            </div>
+                            <dl class="dl-horizontal">
+                                <dt><em>2012 ~ present</em></dt>
+                                <dd><b>Research Assistant</b></dd>
+                                <dd>Smart Service and Applications Group</dd>
+                                <dd>Intel-NTU Connected Context Computing Center</dd> 
+                                <dd>Advisor: Prof. Li-Chen Fu</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt><em>2010 ~ 2011</em></dt>
+                                <dd><b>Undergraduate Research</b></dd>
+                                <dd>Smart Home Group, Intelligent Robot and Automation Lab</dd>
+                                <dd>National Taiwan University, Taipei, Taiwan </dd> 
+                                <dd>Advisor: Prof. Li-Chen Fu</dd>
+                            </dl>
+
+                            <div id="research_project" class="page-header">
+                                <h3>Research Project</h3>
+                            </div>
+                            <dl class="dl-horizontal">
+                                <dt><a href="#portfolio">More in portfolio</a></dt>
+                                <dd></dd>
+                            </dl>
                         </div>
-                        <div class="span9">
-                            <nav>
-                            目前位置：
-                            <a href="/">首頁</a>
-                            &gt; 
-                            </nav>
-                            <section>
-                            <div id="curriculum_vitae" class="page-header">
-                                <h1>Curriculum Vitae</h1>
-                            </div>    
-                            <h2 id="education">Education</h2>
-                            </section>
-                        </div>
-                    </div> <!-- row -->
-                </div>
+                    </div>
+                </div> <!-- row -->
                 <!-- CV tab page end -->
 
             </div> <!-- tab-content -->
@@ -142,7 +193,7 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="./js/jquery-1.10.2.min.js"></script>
         <script src="./dist/js/bootstrap.min.js"></script>
         <script src="./docs-assets/js/holder.js"></script>
     </body>
