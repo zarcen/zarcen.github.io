@@ -11,12 +11,19 @@
         <title>Wei-Chen Chen (zarcen)</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="./dist/css/bootstrap.css" rel="stylesheet" media="screen">
+        <!-- <link href="./dist/css/bootstrap.min.css" rel="stylesheet" media="screen"/> -->
+        <link href="./bootstrap.min.css" rel="stylesheet" /> 
         <!-- Bootstrap theme -->
-        <link href="./dist/css/bootstrap-theme.min.css" rel="stylesheet">
+        <!-- <link href="./dist/css/bootstrap-theme.min.css" rel="stylesheet"/> -->
+        <link href="./bootstrap-theme.min.css" rel="stylesheet" /> 
+        <!-- extras CSS -->
+        <link href="./docs.css" rel="stylesheet" />
+        <link href="./pygments-manni.css" rel="stylesheet" />
 
-        <!-- Custom styles for this template -->
-        <link href="theme.css" rel="stylesheet">j
+
+        <!-- Custom styles for this page -->
+        <link href="theme.css" rel="stylesheet">
+        <link href="carousel.css" rel="stylesheet">
 
         <!-- Just for debugging purposes. Don't actually copy this line! -->
         <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -51,23 +58,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#" data-toggle="tab">zarcen.github.io</a>
+                    <a class="navbar-brand" href="#" data-toggle="tab">Wei-Chen Chen (zarcen)</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#about" data-toggle="tab">About</a></li>
-                        <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                        </li>
+                        <li><a id="nav_portfolio" href="#portfolio" data-toggle="tab">Portfolio</a></li>
                         <li><a href="#cv" data-toggle="tab">CV</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -75,120 +71,288 @@
         </div>
 
         <div class="container">
-            <div class="tab-content">
-                <div class="tab-pane fade in active" id="about">
-                    <!-- Main jumbotron for a primary marketing message or call to action -->
-                    <div id="about" class="page-header">
-                        <h1>Wei-Chen Chen (zarcen)</h1>
-                    </div>
-                    <div class="jumbotron">
+            <div class="row"> <!-- contact row -->
+                <div class="tab-content col-md-9">
+                    <div class="tab-pane fade in active" id="about">
                         <div class="row">
-                            <div class="col-lg-8">
-                                <h2>About Me</h2>
-                                <p>Hi, I am Wei-Chen Chen (zarcen). I am a system developer.</p>
-                                <p>
-                                I am originally from Taipei, Taiwan.
+                            <div class="col-md-3">
+                            </div> <!-- col-md-3 -->
+                            <div class="col-md-9">
+                                <div class="page-header">
+                                    <h3>About Me</h3>
+                                </div>
+                                <p class="context">Hi, I am a system developer from Taipei, Taiwan.
                                 I received my B.S. in computer science from <a target="_blank" href="http://www.csie.ntu.edu.tw/main.php">National Taiwan University</a>
                                 in 2011.
                                 </p>
-                                <p>
-                                My research interests include human-computer interactions, ubiquitous computing, and machine learning. 
+                                <p>My research interests include human-computer interactions, ubiquitous computing, and machine learning. 
                                 I have worked in Smart Home Group of NTU Intelligent Robut Lab and been advised by
                                 <a target="_blank" href="http://robotlab.csie.ntu.edu.tw/doku.php?id=%E5%82%85%E7%AB%8B%E6%88%90">Prof. Li-Chen Fu</a> 
                                 since 2010, currently working as research assistant in Intel-NTU Center.
                                 My current research includes cloud-enabled context-aware system, user-interaction designing, and context summarization.
                                 </p>
-                            </div>
-                            <div class="col-lg-4">
-                                <h2>Contact Me</h2>
-                                <p>Email: zarcen [at] gmail.com&nbsp;<a href="mailto:zarcen@gmail.com"><img src="./image/gmail.png" width=30 height=30></img></a></p>
-                                <p>Skype: zarcenchen&nbsp;<img src="./image/skype.jpeg" width=30 height=30></img></p>
-                                <p>Github Repos: zarcen&nbsp;<a href="https://github.com/zarcen"><img src="./image/github.png" width=30 height=30></img></a></p>
-                                <p><img src="./image/profile2.png" class="img-thumbnail" alt="Wei Chen Photo" align="left" height="200" width="150"> 
-                            </div>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                            </div> <!-- col-md-9 -->
+                        </div> <!-- row -->
+                    </div>
+
+                    <!-- portfolio tab page-->
+                    <div class="tab-pane fade" id="portfolio"> 
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="bs-sidenav affix" style="width:180px">
+                                    <ul class="nav">
+                                        <li>&nbsp;Work in Progress</li>
+                                        <li><a href="#">M-CHESS</a></li>
+                                        <li>&nbsp;Undergraduate Projects</li>
+                                        <li><a onclick='scrollTo("#glidingzhuyin");'>Glideing Zhuyin</a></li>
+                                        <li><a onclick='scrollTo("#lightsys");'><small>Illumination-Comfort Lighting Control System</small></a></li>
+                                        <li><a onclick='scrollTo("#hvac");'><small>Adaptative-PMV HVAC Control System</small></a></li>
+                                        <li><a onclick='scrollTo("#mpi_recast");'>MPI Recast</a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-9">
+                                <!-- working -->
+                                <div class="alert alert-info" id="work_in_progress">
+                                    <h3><strong>Work in Progress </strong><small>@ National Taiwan University</small></h3>
+                                </div>
+                                <div class="page-header">
+                                    <h3>M-CHESS <small>(2012-present)</small></h3>
+                                </div>
+                                <dl class="dl-horizontal">
+                                    <dt></dt>
+                                    <dd></dd>
+                                </dl>
+
+                                <!-- undergraduate -->
+                                <div class="alert alert-success" id="undergraduate_project">
+                                    <h3><strong>Undergraduate Projects </strong><small>@ National Taiwan University</small></h3>
+                                </div>
+                                <div class="page-header" id="glidingzhuyin">
+                                    <h3>Gliding Zhuyin <small>(2011)</small></h3>
+                                </div>
+                                <div align="center"><img alt="glidingzhuyin" src="./image/glidingzhuyin.png"></div>
+                                <p>Implemented a new approach for chinese input method in iOS system.
+                                We categorized the phonemes in tradition Zhuyin input method into two categories: initial and vowel.
+                                Users can intuitively glide between the phonemes and chose their intentional tone by slidely changing their track pattern. 
+                                </p>
+                                <p>
+                                Links:&nbsp;
+                                <a href="./docs/Poster.png"><button type="button" class="btn btn-sm btn-primary">Poster</button></a>
+                                <a href="./docs/MHCI_Project.pdf"><button type="button" class="btn btn-sm btn-primary">Slides</button></a>
+                                </p>
+                                <div class="page-header" id="lightsys">
+                                    <h3>Illumination-Comfort Lighting Control System <small>(2011)</small></h3>
+                                </div>
+                                <!-- light sys Carousel -->
+                                <div id="lightsys_carousel" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#lightsys_carousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#lightsys_carousel" data-slide-to="1"></li>
+                                        <li data-target="#lightsys_carousel" data-slide-to="2"></li>
+                                        <li data-target="#lightsys_carousel" data-slide-to="3"></li>
+                                        <li data-target="#lightsys_carousel" data-slide-to="4"></li>
+                                        <li data-target="#lightsys_carousel" data-slide-to="5"></li>
+                                        <li data-target="#lightsys_carousel" data-slide-to="6"></li>
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item" style="text-align:center">
+                                            <p><img alt="lightsys slide" src="./image/lightsys.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="lightsys slide" src="./image/lightsys.000.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="lightsys slide" src="./image/lightsys.001.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="lightsys slide" src="./image/lightsys.002.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="lightsys slide" src="./image/lightsys.003.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="lightsys slide" src="./image/lightsys.004.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="lightsys slide" src="./image/lightsys.005.png"></p>
+                                        </div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="left carousel-control" href="#lightsys_carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                    <a class="right carousel-control" href="#lightsys_carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>                                    
+                                </div> <!-- light sys Carousel -->
+                                <p>Implemented a dynamic lighting control system that utilizes daylight-harvesting.
+                                Integrated with an robust activity rocognition (AR) engine, the system provides proper lighting
+                                services to user. It performs daylight detection, inferring user's activity from AR engine, 
+                                automaticly turning on/off different light set based on the indoor/outdoor illumination and 
+                                user's activity.
+                                </p>
+                                <div class="page-header" id="hvac">
+                                    <h3>Adaptative-PMV HVAC Control System<small> (2010)</small></h3>
+                                </div>
+                                <!-- HVAC Carousel -->
+                                <div id="hvac_carousel" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#hvac_carousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#hvac_carousel" data-slide-to="1"></li>
+                                        <li data-target="#hvac_carousel" data-slide-to="2"></li>
+                                        <li data-target="#hvac_carousel" data-slide-to="3"></li>
+                                        <li data-target="#hvac_carousel" data-slide-to="4"></li>
+                                        <li data-target="#hvac_carousel" data-slide-to="5"></li>
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item" style="text-align:center">
+                                            <p><img alt="hvac slide" src="./image/hvac.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="hvac slide" src="./image/hvac2.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="hvac slide" src="./image/hvac3.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="hvac slide" src="./image/hvac4.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="hvac slide" src="./image/hvac5.png"></p>
+                                        </div>
+                                        <div class="item" style="text-align:center">
+                                            <p><img alt="hvac slide" src="./image/hvac6.png"></p>
+                                        </div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="left carousel-control" href="#hvac_carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                    <a class="right carousel-control" href="#hvac_carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>                                    
+                                </div> <!-- HVAC Carousel -->
+                                <p>Implemented a HVAC (Heating, Ventilation, and Air Conditioning) control system.
+                                The system uses PMV (Predictd Mean Vote, <i>developed by Fanger</i>) indices to design strategies 
+                                of indoor thermal adjustment. The system's wireless sensors are telosb-architecture running on TinyOS.
+                                It utilizes collected contextual data in environment from wireless sensor to infer user's activity to 
+                                compute accurate user's thermal comfort. Once user actively tunes HVAC system either hotter or colder,
+                                it receives the user's feedback to do personal comfort model adaptation.
+                                </p>
+                                <div class="page-header" id="mpi_recast">
+                                    <h3>MPI Recast <small>(2010)</small></h3>
+                                </div>
+                                <div align="center"><img alt="glidingzhuyin" src="./image/mpi_recast.png"></div>
+                                <p>This was a project in the course <i>Parallel Programming</i> at National Taiwan University.
+                                RecastNavigation is a open source project, which is developed by <i>Crisis.</i>
+                                The software's goal is to do path finding in a 3D map. However, it takes quite a long time to
+                                build the map's NavMesh when the map's size is huge. Thus, we implemented a MPI version program to
+                                speed up this bottleneck part by paralleling its mesh-building process.
+                                </p>
+
+                            </div> <!-- col-md-9 -->
+                        </div> <!-- row --> 
+                    </div> <!-- portfolio tab page-->
+
+                    <!-- CV tab page -->
+                    <div class="tab-pane fade" id="cv"> 
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="bs-sidenav affix" style="width:180px">
+                                    <ul class="nav">
+                                        <li><a onclick='scrollTo("#pdf_cv");'>PDF CV</a></li>
+                                        <li><a onclick='scrollTo("#education");'> Education</a></li>
+                                        <li><a onclick='scrollTo("#skills");'>Skills</a></li>
+                                        <li><a onclick='scrollTo("#research_experience");'>Research Experience</a></li>
+                                        <li><a onclick='scrollTo("#research_project");'>Research Project</a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-9">
+                                <div id="pdf_cv" class="page-header">
+                                    <h3>Curriculum Vitae</h3>
+                                </div>
+                                <dl class="dl-horizontal">
+                                    <dt><a href="./cv.pdf">Full CV in PDF</a></dt>
+                                    <dd></dd>
+                                </dl>
+
+                                <div id="education" class="page-header">
+                                    <h3>Education</h3>
+                                </div>
+                                <dl class="dl-horizontal">
+                                    <dt><em>2007 ~ 2011</em></dt>
+                                    <dd>National Taiwan University, Taipei, Taiwan</dd>
+                                    <dd><small>Bachelor of Science, Computer Science and Information Engineering</small></dd>
+                                </dl>
+
+                                <div id="skills" class="page-header">
+                                    <h3>Skills</h3>
+                                </div>
+                                <dl class="dl-horizontal">
+                                    <dt><em>Programming</em></dt>
+                                    <dd>C, C++, Java, Python, Ruby</dd>
+                                    <dt><em>Web</em></dt>
+                                    <dd>Javascript, jQuery, JSP, HTML/CSS</dd>
+                                </dl>
+
+                                <div id="research_experience" class="page-header">
+                                    <h3>Research Experience</h3>
+                                </div>
+                                <dl class="dl-horizontal">
+                                    <dt><em>2012 ~ present</em></dt>
+                                    <dd><b>Research Assistant</b></dd>
+                                    <dd>Smart Service and Applications Group</dd>
+                                    <dd>Intel-NTU Connected Context Computing Center</dd> 
+                                    <dd>Advisor: Prof. Li-Chen Fu</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt><em>2010 ~ 2011</em></dt>
+                                    <dd><b>Undergraduate Research</b></dd>
+                                    <dd>Smart Home Group, Intelligent Robot and Automation Lab</dd>
+                                    <dd>National Taiwan University, Taipei, Taiwan </dd> 
+                                    <dd>Advisor: Prof. Li-Chen Fu</dd>
+                                </dl>
+
+                                <div id="research_project" class="page-header">
+                                    <h3>Research Project</h3>
+                                </div>
+                                <dl class="dl-horizontal">
+                                    <dt><a onclick='$("#nav_portfolio").click();'><button type="button" class="btn btn-sm btn-info">More in portfolio</button></a></dt>
+                                    <dd></dd>
+                                </dl>
+                            </div> <!-- col-md-9 -->
+                        </div> <!-- row -->
+                    </div> <!-- CV tab page end -->
+
+                </div> <!-- tab-content -->
+                <div class="col-md-3">
+                    <div class="panel panel-default affix">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Contact me</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p align="center"><img style="float:center" src="./image/profile2.png" class="img-thumbnail" alt="Wei Chen Photo" align="left" height="200" width="150"></p>
+                            <p>Email: zarcen [at] gmail.com&nbsp;<a href="mailto:zarcen@gmail.com"><img alt="mailtome" src="./image/gmail.png" width=30 height=30></a></p>
+                            <p>Skype: zarcenchen&nbsp;<img alt="skype" src="./image/skype.jpeg" width=30 height=30></p>
+                            <p>Github Repos: zarcen&nbsp;<a href="https://github.com/zarcen"><img alt="github" src="./image/github.png" width=30 height=30></a></p>
                         </div>
                     </div>
-                </div>
-
-                <!-- CV tab page -->
-                <div class="tab-pane fade" id="cv"> 
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div id="side-nav" class="list-group nav affix">
-                                <li><a href="#pdf_cv" class="list-group-item">PDF CV</a></li>
-                                <li><a href="#education" class="list-group-item">Education</a></li>
-                                <li><a href="#skills" class="list-group-item">Skills</a></li>
-                                <li><a href="#research_experience" class="list-group-item">Research Experience</a></li>
-                                <li><a href="#research_project" class="list-group-item">Research Project</a></li>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-9">
-                            <div id="pdf_cv" class="page-header">
-                                <h3>Curriculum Vitae</h3>
-                            </div>
-                            <dl class="dl-horizontal">
-                                <dt><a href="./cv.pdf">Full CV in PDF</a></dt>
-                                <dd></dd>
-                            </dl>
-
-                            <div id="education" class="page-header">
-                                <h3>Education</h3>
-                            </div>
-                            <dl class="dl-horizontal">
-                                <dt><em>2007 ~ 2011</em></dt>
-                                <dd>National Taiwan University, Taipei, Taiwan</dd>
-                                <dd><small>Bachelor of Science, Computer Science and Information Engineering</small></dd>
-                            </dl>
-
-                            <div id="skills" class="page-header">
-                                <h3>Skills</h3>
-                            </div>
-                            <dl class="dl-horizontal">
-                                <dt><em>Programming</em></dt>
-                                <dd>C, C++, Java, Python, Ruby</dd>
-                                <dt><em>Web</em></dt>
-                                <dd>Javascript, jQuery, JSP, HTML/CSS</dd>
-                            </dl>
-
-                            <div id="research_experience" class="page-header">
-                                <h3>Research Experience</h3>
-                            </div>
-                            <dl class="dl-horizontal">
-                                <dt><em>2012 ~ present</em></dt>
-                                <dd><b>Research Assistant</b></dd>
-                                <dd>Smart Service and Applications Group</dd>
-                                <dd>Intel-NTU Connected Context Computing Center</dd> 
-                                <dd>Advisor: Prof. Li-Chen Fu</dd>
-                            </dl>
-                            <dl class="dl-horizontal">
-                                <dt><em>2010 ~ 2011</em></dt>
-                                <dd><b>Undergraduate Research</b></dd>
-                                <dd>Smart Home Group, Intelligent Robot and Automation Lab</dd>
-                                <dd>National Taiwan University, Taipei, Taiwan </dd> 
-                                <dd>Advisor: Prof. Li-Chen Fu</dd>
-                            </dl>
-
-                            <div id="research_project" class="page-header">
-                                <h3>Research Project</h3>
-                            </div>
-                            <dl class="dl-horizontal">
-                                <dt><a href="#portfolio">More in portfolio</a></dt>
-                                <dd></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div> <!-- row -->
-                <!-- CV tab page end -->
-
-            </div> <!-- tab-content -->
-
-            <!-- Site footer -->
-            <div class="footer">
-                <span style="float:left">&copy; Zarcen Chen 2013</span> <span style="float:right">Last updated: 2013-11-4</span>
-            </div>
-
+                </div> <!-- col-md-3 -->
+            </div> <!-- contact row -->
         </div> <!-- /container -->
 
+        <!-- Site footer -->
+        <div class="container footer">
+            <span style="float:left">&copy; Zarcen Chen 2013</span>
+            <span style="float:right">Last updated: 2013-11-4</span>
+        </div> <!-- /container -->
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
@@ -196,5 +360,12 @@
         <script src="./js/jquery-1.10.2.min.js"></script>
         <script src="./dist/js/bootstrap.min.js"></script>
         <script src="./docs-assets/js/holder.js"></script>
+        <script src="./docs-assets/js/application.js"></script>
+        <script src="http://platform.twitter.com/widgets.js"></script>        
+        <script>
+            function scrollTo(tar_id) {
+                $("body").scrollTop($(tar_id).offset().top - 90);
+            }
+        </script>
     </body>
 </html>
