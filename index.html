@@ -26,13 +26,13 @@
         <link href="carousel.css" rel="stylesheet">
 
         <!-- Just for debugging purposes. Don't actually copy this line! -->
-        <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="./docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
+        <!--[if lt IE 9]> -->
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
+        <!-- [endif]-->
 
         <!-- Google Analysis -->
         <script>
@@ -76,32 +76,39 @@
                     <div class="tab-pane fade in active" id="about">
                         <div class="row">
                             <div class="col-md-3">
+                                <div class="bs-sidenav affix" style="width:180px">
+                                    <ul class="nav">
+                                        <li><a href="#aboutme">About Me</a></li>
+                                    </ul>
+                                </div>
                             </div> <!-- col-md-3 -->
                             <div class="col-md-9">
-                                <div class="page-header">
+                                <div class="page-header" id="aboutme">
                                     <h3>About Me</h3>
                                 </div>
-                                <p class="context">Hi, I am a system developer from Taipei, Taiwan.
-                                I received my B.S. in computer science from <a target="_blank" href="http://www.csie.ntu.edu.tw/main.php">National Taiwan University</a>
+                                <p class="context">
+                                Wei-Chen Chen is from Taipei, Taiwan. His nickname is zarcen.
+                                He received my B.S. in computer science from <a target="_blank" href="http://www.csie.ntu.edu.tw/main.php">National Taiwan University</a>
                                 in 2011.
                                 </p>
-                                <p>My research interests include human-computer interactions, ubiquitous computing, and machine learning. 
-                                I have worked in Smart Home Group of NTU Intelligent Robut Lab and been advised by
+                                <p>He enjoys developing systems or software which could highly influence daily lives.
+                                His research interests include human-computer interactions, ubiquitous computing, and machine learning. 
+                                He has worked in Smart Home Group of NTU Intelligent Robut Lab and been supervised by
                                 <a target="_blank" href="http://robotlab.csie.ntu.edu.tw/doku.php?id=%E5%82%85%E7%AB%8B%E6%88%90">Prof. Li-Chen Fu</a> 
-                                since 2010, currently working as research assistant in Intel-NTU Center.
-                                My current research includes cloud-enabled context-aware system, user-interaction designing, and context summarization.
+                                since 2010, currently working as research assistant in <a target="_blank" href="http://ccc.ntu.edu.tw/"> Intel-NTU Center</a>.
+                                His current research includes cloud-enabled context-aware system, user-interaction designing, and context summarization.
+                                His current project is to laverage cloud system's advantage to expand the application scalability
+                                in the home context-aware services. 
                                 </p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
                             </div> <!-- col-md-9 -->
                         </div> <!-- row -->
                     </div>
@@ -112,9 +119,9 @@
                             <div class="col-md-3">
                                 <div class="bs-sidenav affix" style="width:180px">
                                     <ul class="nav">
-                                        <li>&nbsp;Work in Progress</li>
-                                        <li><a href="#">M-CHESS</a></li>
-                                        <li>&nbsp;Undergraduate Projects</li>
+                                        <li>&nbsp;<b>Work in Progress</b></li>
+                                        <li><a onclick='scrollTo("#mchess");'>M-CHESS</a></li>
+                                        <li>&nbsp;<b>Undergraduate Projects</b></li>
                                         <li><a onclick='scrollTo("#glidingzhuyin");'>Glideing Zhuyin</a></li>
                                         <li><a onclick='scrollTo("#lightsys");'><small>Illumination-Comfort Lighting Control System</small></a></li>
                                         <li><a onclick='scrollTo("#hvac");'><small>Adaptative-PMV HVAC Control System</small></a></li>
@@ -127,13 +134,47 @@
                                 <div class="alert alert-info" id="work_in_progress">
                                     <h3><strong>Work in Progress </strong><small>@ National Taiwan University</small></h3>
                                 </div>
-                                <div class="page-header">
+                                <div class="page-header" id="mchess">
                                     <h3>M-CHESS <small>(2012-present)</small></h3>
                                 </div>
-                                <dl class="dl-horizontal">
-                                    <dt></dt>
-                                    <dd></dd>
-                                </dl>
+                                <ul class="nav nav-tabs" id="mchessTab">
+                                    <li class="active"><a href="#mchess_photo" data-toggle="tab">Diagram</a></li>
+                                    <li><a href="#mchess_intro" data-toggle="tab">Intro Video</a></li>
+                                    <li><a href="#mchess_demo" data-toggle="tab">Demo Video</a></li>
+                                </ul>
+                                <div class="tab-content" align="center">
+                                    <div class="tab-pane active" id="mchess_photo">
+                                        <div align="center"><img alt="mchess" src="./image/mchess_pic.png" width="500" height="360"></div>
+                                    </div>
+                                    <div class="tab-pane" id="mchess_intro">
+                                        <video preload controls width="500" height="360">
+                                            <source src="./video/M2M_intro.mp4" type="video/mp4" />
+                                            <source src="./video/M2M_intro.ogv" type="video/ogg" />
+                                            <source src="" type="video/web" />
+                                            Your browser doesn not support the HTML5 video.
+                                        </video>
+                                    </div>
+                                    <div class="tab-pane" id="mchess_demo">
+                                        <video preload controls width="500" height="360">
+                                            <source src="./video/2013_313_video_final.m4v" type="video/mp4" />
+                                            <source src="./video/2013_313_video_final.ogv" type="video/ogg" />
+                                            <source src="" type="video/web" />
+                                            Your browser doesn not support the HTML5 video.
+                                        </video>
+                                    </div>
+                                </div>
+                                <p>By considering the potential merits of behavioral, technological, and organizational changes, 
+                                out team proposes an ES system named as M2M-based Context-aware Home Energy-Saving 
+                                System (M-CHESS). The goal of M-CHESS is to optimize context-aware home energy saving and to 
+                                minimize user's interventions in the determination of ES policies while maintaining the best user 
+                                comfort requirements through employment of the M2M infrastructure.
+                                </p>
+                                <p>
+                                Links:&nbsp;
+                                <a target="_blank" href="http://ccc.ntu.edu.tw/index.php/en/research/project/HomeEnergy"><button type="button" class="btn btn-sm btn-primary">Project Page</button></a>
+                                </p>
+                                </br>
+                                </br>
 
                                 <!-- undergraduate -->
                                 <div class="alert alert-success" id="undergraduate_project">
@@ -149,8 +190,8 @@
                                 </p>
                                 <p>
                                 Links:&nbsp;
-                                <a href="./docs/Poster.png"><button type="button" class="btn btn-sm btn-primary">Poster</button></a>
-                                <a href="./docs/MHCI_Project.pdf"><button type="button" class="btn btn-sm btn-primary">Slides</button></a>
+                                <a target="_blank" href="./docs/Poster.png"><button type="button" class="btn btn-sm btn-primary">Poster</button></a>
+                                <a target="_blank" href="./docs/MHCI_Project.pdf"><button type="button" class="btn btn-sm btn-primary">Slides</button></a>
                                 </p>
                                 <div class="page-header" id="lightsys">
                                     <h3>Illumination-Comfort Lighting Control System <small>(2011)</small></h3>
@@ -163,15 +204,10 @@
                                         <li data-target="#lightsys_carousel" data-slide-to="2"></li>
                                         <li data-target="#lightsys_carousel" data-slide-to="3"></li>
                                         <li data-target="#lightsys_carousel" data-slide-to="4"></li>
-                                        <li data-target="#lightsys_carousel" data-slide-to="5"></li>
-                                        <li data-target="#lightsys_carousel" data-slide-to="6"></li>
                                     </ol>
                                     <!-- Carousel items -->
                                     <div class="carousel-inner">
                                         <div class="active item" style="text-align:center">
-                                            <p><img alt="lightsys slide" src="./image/lightsys.png"></p>
-                                        </div>
-                                        <div class="item" style="text-align:center">
                                             <p><img alt="lightsys slide" src="./image/lightsys.000.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
@@ -185,9 +221,6 @@
                                         </div>
                                         <div class="item" style="text-align:center">
                                             <p><img alt="lightsys slide" src="./image/lightsys.004.png"></p>
-                                        </div>
-                                        <div class="item" style="text-align:center">
-                                            <p><img alt="lightsys slide" src="./image/lightsys.005.png"></p>
                                         </div>
                                     </div>
                                     <!-- Carousel nav -->
@@ -255,7 +288,8 @@
                                 build the map's NavMesh when the map's size is huge. Thus, we implemented a MPI version program to
                                 speed up this bottleneck part by paralleling its mesh-building process.
                                 </p>
-
+                                </br>
+                                </br>
                             </div> <!-- col-md-9 -->
                         </div> <!-- row --> 
                     </div> <!-- portfolio tab page-->
@@ -279,7 +313,7 @@
                                     <h3>Curriculum Vitae</h3>
                                 </div>
                                 <dl class="dl-horizontal">
-                                    <dt><a href="./cv.pdf">Full CV in PDF</a></dt>
+                                    <dt><a target="_blank" href="./cv.pdf">Full CV in PDF</a></dt>
                                     <dd></dd>
                                 </dl>
 
@@ -298,6 +332,8 @@
                                 <dl class="dl-horizontal">
                                     <dt><em>Programming</em></dt>
                                     <dd>C, C++, Java, Python, Ruby</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
                                     <dt><em>Web</em></dt>
                                     <dd>Javascript, jQuery, JSP, HTML/CSS</dd>
                                 </dl>
@@ -338,10 +374,11 @@
                             <h3 class="panel-title">Contact me</h3>
                         </div>
                         <div class="panel-body">
-                            <p align="center"><img style="float:center" src="./image/profile2.png" class="img-thumbnail" alt="Wei Chen Photo" align="left" height="200" width="150"></p>
+                            <p align="center"><img style="float:center" src="./image/profile2.png" class="img-thumbnail" alt="Wei Chen Photo" align="center" height="200" width="150"></p>
                             <p>Email: zarcen [at] gmail.com&nbsp;<a href="mailto:zarcen@gmail.com"><img alt="mailtome" src="./image/gmail.png" width=30 height=30></a></p>
                             <p>Skype: zarcenchen&nbsp;<img alt="skype" src="./image/skype.jpeg" width=30 height=30></p>
-                            <p>Github Repos: zarcen&nbsp;<a href="https://github.com/zarcen"><img alt="github" src="./image/github.png" width=30 height=30></a></p>
+                            <p>Linkedin: zarcen&nbsp;<a target="_blank" href="https://tw.linkedin.com/in/zarcen"><img alt="linkedin" src="./image/linkedin.png" width=30 height=30></a></p>
+                            <p>Github Repos: zarcen&nbsp;<a target="_blank" href="https://github.com/zarcen"><img alt="github" src="./image/github.png" width=30 height=30></a></p>
                         </div>
                     </div>
                 </div> <!-- col-md-3 -->
