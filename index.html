@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="shortcut icon" href="./docs-assets/ico/favicon.png">
@@ -76,13 +76,9 @@
                     <div class="tab-pane fade in active" id="about">
                         <div class="row">
                             <div class="col-md-3">
-                                <div class="bs-sidenav affix" style="width:180px">
-                                    <ul class="nav">
-                                        <li><a href="#aboutme">About Me</a></li>
-                                    </ul>
-                                </div>
                             </div> <!-- col-md-3 -->
                             <div class="col-md-9">
+
                                 <div class="page-header" id="aboutme">
                                     <h3>About Me</h3>
                                 </div>
@@ -119,9 +115,9 @@
                             <div class="col-md-3">
                                 <div class="bs-sidenav affix" style="width:180px">
                                     <ul class="nav">
-                                        <li>&nbsp;<b>Work in Progress</b></li>
+                                        <a class="brand" onclick='scrollTo("#work_in_progress")'>&nbsp;<b>Work in Progress</b></a>
                                         <li><a onclick='scrollTo("#mchess");'>M-CHESS</a></li>
-                                        <li>&nbsp;<b>Undergraduate Projects</b></li>
+                                        <a class="brand" onclick='scrollTo("#undergraduate_project")'>&nbsp;<b>Undergraduate Projects</b></a>
                                         <li><a onclick='scrollTo("#glidingzhuyin");'>Glideing Zhuyin</a></li>
                                         <li><a onclick='scrollTo("#lightsys");'><small>Illumination-Comfort Lighting Control System</small></a></li>
                                         <li><a onclick='scrollTo("#hvac");'><small>Adaptative-PMV HVAC Control System</small></a></li>

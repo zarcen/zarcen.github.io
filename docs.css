@@ -420,6 +420,12 @@ body {
   border-radius: 5px;
 }
 
+@media (max-width: 800px) {
+    .bs-sidenav {
+        display: none;
+    }
+}
+
 /* All levels of nav */
 .bs-sidebar .nav > li > a {
   display: block;
