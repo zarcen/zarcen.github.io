@@ -43,8 +43,18 @@
 
             ga('create', 'UA-45406933-1', 'zarcen.github.io');
             ga('send', 'pageview');
-
         </script>
+
+        <!-- The following part is for mobile-device screen visibility config -->
+        <script type="text/javascript">
+            if(window.screen.width >= 767){
+                $('#visible-contact-cellphone').style.display = 'none';
+            }
+            else {
+                $('#visible-contact-cellphone').style.display = 'block';
+            }
+        </script>
+
     </head>
 
     <body>
@@ -65,6 +75,7 @@
                         <li><a href="#about" data-toggle="tab">About</a></li>
                         <li><a id="nav_portfolio" href="#portfolio" data-toggle="tab">Portfolio</a></li>
                         <li><a href="#cv" data-toggle="tab">CV</a></li>
+                        <li id="visible-contact-cellphone"><a href="#contact" data-toggle="tab">Contact</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -134,9 +145,9 @@
                                     <h3>M-CHESS <small>(2012-present)</small></h3>
                                 </div>
                                 <ul class="nav nav-tabs" id="mchessTab">
-                                    <li class="active"><a href="#mchess_photo" data-toggle="tab">Diagram</a></li>
-                                    <li><a href="#mchess_intro" data-toggle="tab">Intro Video</a></li>
-                                    <li><a href="#mchess_demo" data-toggle="tab">Demo Video</a></li>
+                                    <li class="active"><a href="#mchess_photo" data-toggle="tab"><small>Diagram</small></a></li>
+                                    <li><a href="#mchess_intro" data-toggle="tab"><small>Intro Video</small></a></li>
+                                    <li><a href="#mchess_demo" data-toggle="tab"><small>Demo Video</small></a></li>
                                 </ul>
                                 <div class="tab-content" align="center">
                                     <div class="tab-pane active" id="mchess_photo">
@@ -352,12 +363,30 @@
                             </div> <!-- col-md-9 -->
                         </div> <!-- row -->
                     </div> <!-- CV tab page end -->
+                    <div class="tab-pane fade" id="contact">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 align="center" class="panel-title">Contact me</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p align="center"><img style="float:center" src="./image/profile2.png" class="img-thumbnail" alt="Wei Chen Photo" height="200" width="150"></p>
+                                        <p>Email: zarcen [at] gmail.com&nbsp;<a href="mailto:zarcen@gmail.com"><img alt="mailtome" src="./image/gmail.png" width=30 height=30></a></p>
+                                        <p>Skype: zarcenchen&nbsp;<img alt="skype" src="./image/skype.jpeg" width=30 height=30></p>
+                                        <p>Linkedin: zarcen&nbsp;<a target="_blank" href="https://tw.linkedin.com/in/zarcen"><img alt="linkedin" src="./image/linkedin.png" width=30 height=30></a></p>
+                                        <p>Github Repos: zarcen&nbsp;<a target="_blank" href="https://github.com/zarcen"><img alt="github" src="./image/github.png" width=30 height=30></a></p>
+                                    </div>
+                                </div>
+                            </div> <!-- col-md-9 -->
+                        </div> <!-- row -->
+                    </div>
 
                 </div> <!-- tab-content -->
                 <div class="col-md-3">
-                    <div class="panel panel-default affix">
+                    <div class="panel panel-default panel-contact affix">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Contact me</h3>
+                            <h3 align="center" class="panel-title">Contact me</h3>
                         </div>
                         <div class="panel-body">
                             <p align="center"><img style="float:center" src="./image/profile2.png" class="img-thumbnail" alt="Wei Chen Photo" align="center" height="200" width="150"></p>
@@ -373,8 +402,8 @@
 
         <!-- Site footer -->
         <div class="container footer">
-            <span style="float:left">&copy; Zarcen Chen 2013</span>
-            <span style="float:right">Last updated: 2013-11-4</span>
+            <div style="float:left">&copy; Zarcen Chen 2013</div></br>
+            <div style="float:left">&nbsp;&nbsp;&nbsp;&nbsp;Last updated: 2013-11-4</div>
         </div> <!-- /container -->
 
         <!-- Bootstrap core JavaScript

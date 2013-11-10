@@ -420,9 +420,19 @@ body {
   border-radius: 5px;
 }
 
-@media (max-width: 800px) {
+.li-visible-only-cellphone {
+    display: none;
+}
+
+@media (max-width: 767px) {
     .bs-sidenav {
         display: none;
+    }
+    .panel-contact {
+        display: none;
+    }
+    .visible-only-cellphone {
+        display: block;  
     }
 }
 
