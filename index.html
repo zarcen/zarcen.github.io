@@ -394,6 +394,18 @@
             else {
                 $('#visible-contact-cellphone').show();
             }
+
+            window.onload = function(){
+                setTimeout(function(){
+                window.scrollTo(0, 1);
+                }, 100);
+            }
+
+            // jQuery resize event
+            $(window).resize(function() {
+                window.scrollTo(0, 1);
+                //window.location.reload();
+            });
         </script>
     </body>
 </html>
