@@ -387,13 +387,17 @@
 
             //alert(window.screen.width);
             //The following part is for mobile-device screen visibility config
-            w=document.body.clientWidth;
-            if(w > 768){
-                $('#visible-contact-cellphone').hide();
+            function refreshContactWhenFlip() {
+                w=document.body.clientWidth;
+                if(w > 768){
+                    $('#visible-contact-cellphone').hide();
+                }
+                else {
+                    $('#visible-contact-cellphone').show();
+                }
             }
-            else {
-                $('#visible-contact-cellphone').show();
-            }
+            // execute once when load page
+            refreshContactWhenFlip();
 
             window.onload = function(){
                 setTimeout(function(){
@@ -403,8 +407,8 @@
 
             // jQuery resize event
             $(window).resize(function() {
+                refreshContactWhenFlip();
                 window.scrollTo(0, 1);
-                window.location.reload();
             });
         </script>
     </body>
