@@ -45,15 +45,12 @@
             ga('send', 'pageview');
         </script>
 
-        <!-- The following part is for mobile-device screen visibility config -->
-        <script type="text/javascript">
-            if(window.screen.width >= 767){
-                $('#visible-contact-cellphone').style.display = 'none';
+        <style>
+            .img-maxwidth {
+                width: 100%;
+                height: auto;
             }
-            else {
-                $('#visible-contact-cellphone').style.display = 'block';
-            }
-        </script>
+        </style>
 
     </head>
 
@@ -68,14 +65,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#" data-toggle="tab">Wei-Chen Chen (zarcen)</a>
+                    <a class="navbar-brand" href="#about" data-toggle="tab">Wei-Chen Chen (zarcen)</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#about" data-toggle="tab">About</a></li>
                         <li><a id="nav_portfolio" href="#portfolio" data-toggle="tab">Portfolio</a></li>
                         <li><a href="#cv" data-toggle="tab">CV</a></li>
-                        <li id="visible-contact-cellphone"><a href="#contact" data-toggle="tab">Contact</a></li>
+                        <li id="visible-contact-cellphone" style="display:value"><a href="#contact" data-toggle="tab">Contact</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -151,13 +148,13 @@
                                 </ul>
                                 <div class="tab-content" align="center">
                                     <div class="tab-pane active" id="mchess_photo">
-                                        <div align="center"><img alt="mchess" src="./image/mchess_pic.png" width="500" height="375"></div>
+                                        <div align="center"><img class="img-maxwidth" alt="mchess" src="./image/mchess_pic.png" width="100%" height="auto"></div>
                                     </div>
                                     <div class="tab-pane" id="mchess_intro">
-                                        <iframe src="http://player.vimeo.com/video/78848402?title=0&amp;byline=0&amp;portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        <iframe class="img-maxwidth" src="http://player.vimeo.com/video/78848402?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                     </div>
                                     <div class="tab-pane" id="mchess_demo">
-                                        <iframe src="http://player.vimeo.com/video/78848401?title=0&amp;byline=0&amp;portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        <iframe class="img-maxwidth" src="http://player.vimeo.com/video/78848401?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <p>By considering the potential merits of behavioral, technological, and organizational changes, 
@@ -180,7 +177,7 @@
                                 <div class="page-header" id="glidingzhuyin">
                                     <h3>Gliding Zhuyin <small>(2011)</small></h3>
                                 </div>
-                                <div align="center"><img alt="glidingzhuyin" src="./image/glidingzhuyin.png"></div>
+                                <div align="center"><img class="img-maxwidth" alt="glidingzhuyin" src="./image/glidingzhuyin.png"></div>
                                 <p>Implemented a new approach for chinese input method in iOS system.
                                 We categorized the phonemes in tradition Zhuyin input method into two categories: initial and vowel.
                                 Users can intuitively glide between the phonemes and chose their intentional tone by slidely changing their track pattern. 
@@ -205,19 +202,19 @@
                                     <!-- Carousel items -->
                                     <div class="carousel-inner">
                                         <div class="active item" style="text-align:center">
-                                            <p><img alt="lightsys slide" src="./image/lightsys.000.png"></p>
+                                            <p><img class="img-maxwidth" alt="lightsys slide" src="./image/lightsys.000.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
-                                            <p><img alt="lightsys slide" src="./image/lightsys.001.png"></p>
+                                            <p><img class="img-maxwidth" alt="lightsys slide" src="./image/lightsys.001.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
-                                            <p><img alt="lightsys slide" src="./image/lightsys.002.png"></p>
+                                            <p><img class="img-maxwidth" alt="lightsys slide" src="./image/lightsys.002.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
-                                            <p><img alt="lightsys slide" src="./image/lightsys.003.png"></p>
+                                            <p><img class="img-maxwidth" alt="lightsys slide" src="./image/lightsys.003.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
-                                            <p><img alt="lightsys slide" src="./image/lightsys.004.png"></p>
+                                            <p><img class="img-maxwidth" alt="lightsys slide" src="./image/lightsys.004.png"></p>
                                         </div>
                                     </div>
                                     <!-- Carousel nav -->
@@ -246,22 +243,22 @@
                                     <!-- Carousel items -->
                                     <div class="carousel-inner">
                                         <div class="active item" style="text-align:center">
-                                            <p><img alt="hvac slide" src="./image/hvac.png"></p>
+                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
-                                            <p><img alt="hvac slide" src="./image/hvac2.png"></p>
+                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac2.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
-                                            <p><img alt="hvac slide" src="./image/hvac3.png"></p>
+                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac3.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
-                                            <p><img alt="hvac slide" src="./image/hvac4.png"></p>
+                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac4.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
-                                            <p><img alt="hvac slide" src="./image/hvac5.png"></p>
+                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac5.png"></p>
                                         </div>
                                         <div class="item" style="text-align:center">
-                                            <p><img alt="hvac slide" src="./image/hvac6.png"></p>
+                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac6.png"></p>
                                         </div>
                                     </div>
                                     <!-- Carousel nav -->
@@ -278,7 +275,7 @@
                                 <div class="page-header" id="mpi_recast">
                                     <h3>MPI Recast <small>(2010)</small></h3>
                                 </div>
-                                <div align="center"><img alt="glidingzhuyin" src="./image/mpi_recast.png"></div>
+                                <div align="center"><img class="img-maxwidth" alt="mpi_recast" src="./image/mpi_recast.png"></div>
                                 <p>This was a project in the course <i>Parallel Programming</i> at National Taiwan University.
                                 RecastNavigation is a open source project, which is developed by <i>Crisis.</i>
                                 The software's goal is to do path finding in a 3D map. However, it takes quite a long time to
@@ -310,7 +307,7 @@
                                     <h3>Curriculum Vitae</h3>
                                 </div>
                                 <dl class="dl-horizontal">
-                                    <dt><a target="_blank" href="./cv.pdf">Full CV in PDF</a></dt>
+                                    <dt><a target="_blank" href="./cv.pdf"><button type="button" class="btn btn-sm btn-info">Full CV in PDF</button></a></dt>
                                     <dd></dd>
                                 </dl>
 
@@ -383,7 +380,8 @@
                     </div>
 
                 </div> <!-- tab-content -->
-                <div class="col-md-3">
+
+                <div class="col-md-3"> <!-- right side contact -->
                     <div class="panel panel-default panel-contact affix">
                         <div class="panel-heading">
                             <h3 align="center" class="panel-title">Contact me</h3>
@@ -396,14 +394,14 @@
                             <p>Github Repos: zarcen&nbsp;<a target="_blank" href="https://github.com/zarcen"><img alt="github" src="./image/github.png" width=30 height=30></a></p>
                         </div>
                     </div>
-                </div> <!-- col-md-3 -->
+                </div> <!-- col-md-3, right side contact end -->
             </div> <!-- contact row -->
         </div> <!-- /container -->
 
         <!-- Site footer -->
         <div class="container footer">
-            <div style="float:left">&copy; Zarcen Chen 2013</div></br>
-            <div style="float:left">&nbsp;&nbsp;&nbsp;&nbsp;Last updated: 2013-11-4</div>
+            <span style="float:left">&copy; Zarcen Chen</span>
+            <span style="float:right">Last updated: 2013-11-4</span>
         </div> <!-- /container -->
 
         <!-- Bootstrap core JavaScript
@@ -417,6 +415,15 @@
         <script>
             function scrollTo(tar_id) {
                 $("body").scrollTop($(tar_id).offset().top - 90);
+            }
+
+            //alert(window.screen.width);
+            //The following part is for mobile-device screen visibility config
+            if(window.screen.width > 767){
+                $('#visible-contact-cellphone').hide();
+            }
+            else {
+                $('#visible-contact-cellphone').show();
             }
         </script>
     </body>
