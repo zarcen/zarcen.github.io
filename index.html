@@ -49,6 +49,7 @@
             .img-maxwidth {
                 width: 100%;
                 height: auto;
+                vertical-align: middle;
             }
         </style>
 
@@ -230,41 +231,7 @@
                                 <div class="page-header" id="hvac">
                                     <h3>Adaptative-PMV HVAC Control System<small> (2010)</small></h3>
                                 </div>
-                                <!-- HVAC Carousel -->
-                                <div id="hvac_carousel" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#hvac_carousel" data-slide-to="0" class="active"></li>
-                                        <li data-target="#hvac_carousel" data-slide-to="1"></li>
-                                        <li data-target="#hvac_carousel" data-slide-to="2"></li>
-                                        <li data-target="#hvac_carousel" data-slide-to="3"></li>
-                                        <li data-target="#hvac_carousel" data-slide-to="4"></li>
-                                        <li data-target="#hvac_carousel" data-slide-to="5"></li>
-                                    </ol>
-                                    <!-- Carousel items -->
-                                    <div class="carousel-inner">
-                                        <div class="active item" style="text-align:center">
-                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac.png"></p>
-                                        </div>
-                                        <div class="item" style="text-align:center">
-                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac2.png"></p>
-                                        </div>
-                                        <div class="item" style="text-align:center">
-                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac3.png"></p>
-                                        </div>
-                                        <div class="item" style="text-align:center">
-                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac4.png"></p>
-                                        </div>
-                                        <div class="item" style="text-align:center">
-                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac5.png"></p>
-                                        </div>
-                                        <div class="item" style="text-align:center">
-                                            <p><img class="img-maxwidth" alt="hvac slide" src="./image/hvac6.png"></p>
-                                        </div>
-                                    </div>
-                                    <!-- Carousel nav -->
-                                    <a class="left carousel-control" href="#hvac_carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                                    <a class="right carousel-control" href="#hvac_carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>                                    
-                                </div> <!-- HVAC Carousel -->
+                                <div align="center"><img class="img-maxwidth" alt="hvac" src="./image/hvac.png"></div>
                                 <p>Implemented a HVAC (Heating, Ventilation, and Air Conditioning) control system.
                                 The system uses PMV (Predictd Mean Vote, <i>developed by Fanger</i>) indices to design strategies 
                                 of indoor thermal adjustment. The system's wireless sensors are telosb-architecture running on TinyOS.
@@ -400,8 +367,8 @@
 
         <!-- Site footer -->
         <div class="container footer">
-            <span style="float:left">&copy; Zarcen Chen</span>
-            <span style="float:right">Last updated: 2013-11-4</span>
+            <span style="float:left;color:#008000">&copy; Zarcen Chen</span>
+            <span style="float:right;color:#008000">Last updated: 2013-11-4</span>
         </div> <!-- /container -->
 
         <!-- Bootstrap core JavaScript
@@ -419,7 +386,10 @@
 
             //alert(window.screen.width);
             //The following part is for mobile-device screen visibility config
-            if(window.screen.width > 767){
+            w=document.body.clientWidth;
+            alert(w);
+
+            if(w > 767){
                 $('#visible-contact-cellphone').hide();
             }
             else {
