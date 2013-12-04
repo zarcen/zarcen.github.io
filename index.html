@@ -264,8 +264,9 @@
                                     <ul class="nav">
                                         <li><a onclick='scrollTo("#pdf_cv");'>PDF CV</a></li>
                                         <li><a onclick='scrollTo("#education");'> Education</a></li>
-                                        <li><a onclick='scrollTo("#skills");'>Skills</a></li>
+                                        <li><a onclick='scrollTo("#publication");'>Publication</a></li>
                                         <li><a onclick='scrollTo("#research_experience");'>Research Experience</a></li>
+                                        <li><a onclick='scrollTo("#skills");'>Skills</a></li>
                                         <li><a onclick='scrollTo("#research_project");'>Research Project</a></li>
                                     </ul>
                                 </div>
@@ -275,16 +276,7 @@
                                     <h3>Curriculum Vitae</h3>
                                 </div>
                                 <dl class="dl-horizontal">
-                                    <dt><a target="_blank" href="./cv.pdf"><button type="button" class="btn btn-sm btn-info">Full CV in PDF</button></a></dt>
-                                    <dd></dd>
-                                </dl>
-
-                                <div id="pdf_programming" class="page-header">
-                                    <h3>Programming Competency</h3>
-                                </div>
-                                <dl class="dl-horizontal">
-                                    <dt><a target="_blank" href="./programming_competency.pdf"><button type="button" class="btn btn-sm btn-info">Programming Competency in PDF</button></a></dt>
-                                    <dd></dd>
+                                    <dd><a target="_blank" href="./cv.pdf"><button type="button" class="btn btn-sm btn-info">Full CV (PDF)</button></a></dd>
                                 </dl>
 
                                 <div id="education" class="page-header">
@@ -296,16 +288,17 @@
                                     <dd><small>Bachelor of Science, Computer Science and Information Engineering</small></dd>
                                 </dl>
 
-                                <div id="skills" class="page-header">
-                                    <h3>Skills</h3>
+                                <div id="publication" class="page-header">
+                                    <h3>Publication</h3>
                                 </div>
                                 <dl class="dl-horizontal">
-                                    <dt><em>Programming</em></dt>
-                                    <dd>C, C++, Java, Python, Ruby</dd>
-                                </dl>
-                                <dl class="dl-horizontal">
-                                    <dt><em>Web</em></dt>
-                                    <dd>Javascript, jQuery, JSP, HTML/CSS</dd>
+                                    <dt><em>2013</em></dt>
+                                    <dd>
+                                    Ching-Hu Lu, Chao-Lin Wu, Tsung-Han Yang, Hui-Wen Yeh, Mao-Yung Weng, <b>Wei-Chen
+                                        Chen</b>, Li-Chen Fu, Tsung-Yuan Tai, “Energy-Responsive Aggregate Context for Energy Sav
+                                    ing in a Multi-Resident Environment,” <i>IEEE Transactions on Automation Science and Engineering.</i>
+                                    IEEE T-ASE 2013. (Accepted) 
+                                    </dd>
                                 </dl>
 
                                 <div id="research_experience" class="page-header">
@@ -326,12 +319,26 @@
                                     <dd>Advisor: Prof. Li-Chen Fu</dd>
                                 </dl>
 
+                                <div id="skills" class="page-header">
+                                    <h3>Skills</h3>
+                                </div>
+                                <dl class="dl-horizontal">
+                                    <dt><em>Programming</em></dt>
+                                    <dd>C, C++, Java, Python, Ruby</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt><em>Web</em></dt>
+                                    <dd>Javascript, jQuery, JSP, HTML/CSS</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dd><a target="_blank" href="./programming_competency.pdf"><button type="button" class="btn btn-sm btn-info">Programming Competency (PDF)</button></a></dd>
+                                </dl>
+
                                 <div id="research_project" class="page-header">
                                     <h3>Research Project</h3>
                                 </div>
                                 <dl class="dl-horizontal">
-                                    <dt><a onclick='$("#nav_portfolio").click();'><button type="button" class="btn btn-sm btn-info">More in portfolio</button></a></dt>
-                                    <dd></dd>
+                                    <dd><a onclick='$("#nav_portfolio").click();'><button type="button" class="btn btn-sm btn-info">More in portfolio</button></a></dd>
                                 </dl>
                             </div> <!-- col-md-9 -->
                         </div> <!-- row -->
