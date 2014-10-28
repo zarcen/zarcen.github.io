@@ -131,7 +131,7 @@
       function refreshContactWhenFlip() {
         w=document.body.clientWidth;
         alert(w);
-        alert($('#article').style.fontSize);
+        alert($('#article')[0].style.fontSize);
         if(w > 600){ // horizontal orientation
           $('#article').style.fontSize = '20px';
         }
