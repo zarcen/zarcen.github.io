@@ -131,11 +131,11 @@
       function refreshContactWhenFlip() {
         w=document.body.clientWidth;
         alert(w);
-        if(w > 768){
-          $('#visible-contact-cellphone').hide();
+        if(w > 600){ // horizontal orientation
+          $('#article').style.fontSize = 20
         }
-        else {
-          $('#visible-contact-cellphone').show();
+        else if (w < 400) { // vertical orientation
+          //$('#article').show();
         }
       }
       // execute once when load page
