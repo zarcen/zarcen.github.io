@@ -120,12 +120,6 @@
       // execute once when load page
       //refreshContactWhenFlip();
 
-      window.onload = function(){
-        setTimeout(function(){
-          window.scrollTo(0, 1);
-        }, 100);
-      }
-
       // jQuery resize event
       $(window).resize(function() {
         refreshContactWhenFlip();
