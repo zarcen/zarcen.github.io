@@ -89,20 +89,20 @@
     <script>
       //alert(window.screen.width);
       //The following part is for mobile-device screen visibility config
-      /*function refreshContactWhenFlip() {
+      function refreshContactWhenFlip() {
         w=document.body.clientWidth;
         //alert(w);
         //alert($('#article')[0].style.fontSize);
         if(w > 600){ // horizontal orientation
-          $('#article')[0].style.fontSize = '26px';
+          $('#article')[0].style.fontSize = '14px';
         }
         else if (w < 400) { // vertical orientation
           $('#article')[0].style.fontSize = '14px';
           //$('#article').show();
         }
-      }*/
+      }
       // execute once when load page
-      //refreshContactWhenFlip();
+      refreshContactWhenFlip();
 
       // jQuery resize event
       $(window).resize(function() {
