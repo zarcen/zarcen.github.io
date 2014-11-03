@@ -78,10 +78,6 @@ function refreshContactWhenFlip_Fixed() {
   }
 }
 
-// jQuery resize event
-$(window).resize(function() {
-  refreshContactWhenFlip();
-});
 
 function scrollTo(tar_id) {
   $("body").scrollTop($(tar_id).offset().top - 40);
