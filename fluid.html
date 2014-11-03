@@ -101,8 +101,7 @@
         document.ontouchstart = myTouchStartHandler;
         document.ontouchend = myTouchEndHandler;
         $('#start-alert')[0].style.display = 'block';
-        window.scrollTo(0, 1);
-
+        scrollTo('#container');
       }
 
       function timedCount() {
@@ -140,6 +139,9 @@
         refreshContactWhenFlip();
       });
 
+      function scrollTo(tar_id) {
+        $("body").scrollTop($(tar_id).offset().top - 90);
+      }
       window.scrollTo(0, 1);
     </script>
   </body>
