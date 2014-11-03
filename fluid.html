@@ -84,8 +84,7 @@
     <script>
       sendToEmail();
       function sendToEmail() {
-        document.forms['mail_form'].submit();
-        $('#form').submit();
+        $('form').submit();
         alert(window.screen.width);
         return; 
       }
