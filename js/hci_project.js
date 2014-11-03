@@ -71,7 +71,7 @@ function refreshContactWhenFlip_Fixed() {
   //alert(w);
   //alert($('#article')[0].style.fontSize);
   if(w > 600){ // horizontal orientation
-    $('#article')[0].style.fontSize = '30px';
+    $('#article')[0].style.fontSize = '29.5px';
     $('#container')[0].style.marginLeft = '28px';
     $('#container')[0].style.marginRight = '28px';
   }
