@@ -59,10 +59,10 @@ function refreshContactWhenFlip_Fluid() {
   //alert(w);
   //alert($('#article')[0].style.fontSize);
   if(w > 600){ // horizontal orientation
-    $('#article')[0].style.fontSize = '14px';
+    $('#article')[0].style.fontSize = '16px';
   }
   else if (w < 400) { // vertical orientation
-    $('#article')[0].style.fontSize = '14px';
+    $('#article')[0].style.fontSize = '16px';
     //$('#article').show();
   }
 }
@@ -71,10 +71,10 @@ function refreshContactWhenFlip_Fixed() {
   //alert(w);
   //alert($('#article')[0].style.fontSize);
   if(w > 600){ // horizontal orientation
-    $('#article')[0].style.fontSize = '26px';
+    $('#article')[0].style.fontSize = '28px';
   }
   else if (w < 400) { // vertical orientation
-    $('#article')[0].style.fontSize = '14px';
+    $('#article')[0].style.fontSize = '16px';
     //$('#article').show();
   }
 }
