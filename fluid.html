@@ -45,7 +45,7 @@
       Name: <input style='display:' type="text" name="Name" value=''>
       <input style='display:none' type="text" name="Time Consuming" id="timeConsuming">
       <input style='display:none' type="text" name="Touch Times" id="touchtimes">
-      <input style='display:none' type='text' name='Offset Logs' id='offsetLogs'>
+      <input style='display:none' type='text' name='Offset' id='offsetLogs'>
       <input type="button" value="Start" onClick="timedCount()">
 
       <div class="container" align='center'>
@@ -76,7 +76,8 @@
     <script src="http://platform.twitter.com/widgets.js"></script>        
     <script>
       var touchtimes = 0;
-      var yOffsetOnTouchStart = window.pageYOffset;
+      var yOffsetOnTouchStart;
+      var yOffsetOnTouchEnd;
 
       document.ontouchstart = myTouchStartHandler;
       document.ontouchend = myTouchEndHandler;
@@ -88,7 +89,9 @@
       }
 
       function myTouchEndHandler() {
-        alert(window.pageYOffset);
+        yOffsetOnTouchEnd = window.pageYOffset;
+        alert(yOffsetOnTouchEnd - yOffsetOnTouchStart);
+        document.getElementsByName('Offset').value += (yOffsetOnTouchEnd - yOffsetOnTouchStart).toString();
       }
 
 
