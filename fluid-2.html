@@ -46,7 +46,7 @@
       <input style='display:none' type="text" name="Time Consuming" id="timeConsuming">
       <input style='display:none' type="text" name="Touch Times" id="touchtimes">
       <input style='display:none' type='text' name='Offset' id='offsetLogs'>
-      <input class='btn btn-primary' type="button" value="Start" onClick="timedCount()">
+      <input class='btn btn-primary' type="button" value="Start" onClick="taskStart()">
 
       <div class="container" align='center'>
         <div id='start-alert' class="alert alert-info" role="alert" style='display:none;font-size:10px'>Your task starts NOW.<br>Please start to read the article.</div>
@@ -104,8 +104,7 @@
       var c=0;
       var t;
 
-      function timedCount()
-      {
+      function taskStart() {
         document.getElementById('timeConsuming').value=c;
         c=c+1;
         t=setTimeout("timedCount()",1000);
@@ -114,6 +113,13 @@
         document.ontouchend = myTouchEndHandler;
         $('#start-alert')[0].style.display = 'block';
         window.scrollTo(0, 1);
+
+      }
+
+      function timedCount() {
+        document.getElementById('timeConsuming').value=c;
+        c=c+1;
+        t=setTimeout("timedCount()",1000);
       }
 
       function submitResult() {

@@ -99,7 +99,7 @@
                 <p class="context">
                 Wei-Chen Chen (nickname, Zarcen).
                 He is currently studying in <a target="_blank" href="http://wisc.edu">University of Wisconsin-Madison</a>
-		as a <a target="_blank" href="http://cs.wisc.edu">CS</a> graduate student; meanwhile, working as a teaching assistant in the CS Dept.
+                as a <a target="_blank" href="http://cs.wisc.edu">CS</a> graduate student; meanwhile, working as a teaching assistant in the CS Dept.
                 He received his B.S. in computer science from <a target="_blank" href="http://www.csie.ntu.edu.tw/main.php">National Taiwan University</a> in 2011.
                 </p>
                 <p>He enjoys developing systems or software which could highly influence daily lives.
@@ -427,33 +427,33 @@
     <script src="http://platform.twitter.com/widgets.js"></script>        
     <script>
       function scrollTo(tar_id) {
-      $("body").scrollTop($(tar_id).offset().top - 90);
+        $("body").scrollTop($(tar_id).offset().top - 90);
       }
 
       //alert(window.screen.width);
       //The following part is for mobile-device screen visibility config
       function refreshContactWhenFlip() {
-      w=document.body.clientWidth;
-      if(w > 768){
-      $('#visible-contact-cellphone').hide();
-      }
-      else {
-      $('#visible-contact-cellphone').show();
-      }
+        w=document.body.clientWidth;
+        if(w > 768){
+          $('#visible-contact-cellphone').hide();
+        }
+        else {
+          $('#visible-contact-cellphone').show();
+        }
       }
       // execute once when load page
       refreshContactWhenFlip();
 
       window.onload = function(){
-      setTimeout(function(){
-      window.scrollTo(0, 1);
-      }, 100);
+        setTimeout(function(){
+          window.scrollTo(0, 1);
+        }, 100);
       }
 
       // jQuery resize event
       $(window).resize(function() {
-      refreshContactWhenFlip();
-      window.scrollTo(0, 1);
+        refreshContactWhenFlip();
+        window.scrollTo(0, 1);
       });
     </script>
   </body>
