@@ -50,7 +50,7 @@
   </head>
 
   <body>
-    <form id='mail_form' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
+    <form id='myForm' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
       Name: <input style='display:' type="text" name="Name" value=''>
       <input style='display:none' type="text" name="TimeConsuming" value=''>
       <input type="button" onClick='' value="Start">
@@ -84,7 +84,7 @@
     <script>
       function submitResult() {
         $('#mail_form')[0].action += '?subject=hihi';
-        document.getElementById('mail_form').submit();
+        document.getElementById("myForm").submit();
       }
       //alert(window.screen.width);
       //The following part is for mobile-device screen visibility config
