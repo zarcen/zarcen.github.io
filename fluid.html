@@ -53,6 +53,7 @@
     <form id='myForm' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
       Name: <input style='display:' type="text" name="Name" value=''>
       <input style='display:none' type="text" name="Time Consuming" id="timeConsuming">
+      <input style='display:none' type="text" name="Touch Times" id="touchtimes">
       <input type="button" value="Start" onClick="timedCount()">
 
       <div class="container" align='center'>
@@ -82,11 +83,11 @@
     <script src="./docs-assets/js/application.js"></script>
     <script src="http://platform.twitter.com/widgets.js"></script>        
     <script>
-      var clicktimes = 0;
+      var touchtimes = 0;
       document.ontouchstart = myClickHandler;
       
       function myClickHandler() {
-        clicktimes+=1;
+        touchtimes+=1;
         //alert(clicktimes);
       }
 
@@ -101,6 +102,7 @@
       }
 
       function submitResult() {
+        document.getElementById('touchtimes').value=touchtimes;
         clearTimeout(t);
         $('#myForm')[0].action += '?subject=hihi';
         $("#myForm").submit();
