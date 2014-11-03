@@ -44,11 +44,12 @@ function timedCount() {
   t=setTimeout("timedCount()",1000);
 }
 
-function submitResult() {
+function submitResult(taskType) {
+  var name = $('input:text[name=Name]').val();
   document.getElementById('touchtimes').value=touchtimes;
   clearTimeout(t);
   $('input:text[name=Offset]').val(offset_arr.toString());
-  $('#myForm')[0].action += '?subject=HCI_Project';
+  $('#myForm')[0].action += '?subject=[HCI_Project]' + name + '-' + taskType;
   $("#myForm").submit();
 }
 //alert(window.screen.width);
