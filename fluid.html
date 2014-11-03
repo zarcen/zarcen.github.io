@@ -80,6 +80,10 @@
     <script>
       // execute once when load page
       refreshContactWhenFlip_Fluid();
+      // jQuery resize event
+      $(window).resize(function() {
+        refreshContactWhenFlip_Fluid();
+      });
     </script>
   </body>
 </html>
