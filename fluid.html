@@ -78,6 +78,7 @@
       var touchtimes = 0;
       var yOffsetOnTouchStart;
       var yOffsetOnTouchEnd;
+      var offset_arr = [];
 
       document.ontouchstart = myTouchStartHandler;
       document.ontouchend = myTouchEndHandler;
@@ -90,8 +91,8 @@
 
       function myTouchEndHandler() {
         yOffsetOnTouchEnd = window.pageYOffset;
+        offset_arr.push(yOffsetOnTouchEnd - yOffsetOnTouchStart);
         alert(yOffsetOnTouchEnd - yOffsetOnTouchStart);
-        $('input:text[name=Offset]').val((yOffsetOnTouchEnd - yOffsetOnTouchStart));
       }
 
 
@@ -108,7 +109,8 @@
       function submitResult() {
         document.getElementById('touchtimes').value=touchtimes;
         clearTimeout(t);
-        $('#myForm')[0].action += '?subject=hihi';
+        $('input:text[name=Offset]').val(offset_arr.toString());
+        $('#myForm')[0].action += '?subject=HCI_Project';
         $("#myForm").submit();
       }
       //alert(window.screen.width);
