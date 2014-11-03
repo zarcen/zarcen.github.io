@@ -91,7 +91,7 @@
       function myTouchEndHandler() {
         yOffsetOnTouchEnd = window.pageYOffset;
         alert(yOffsetOnTouchEnd - yOffsetOnTouchStart);
-        document.getElementsByName('Offset').value += (yOffsetOnTouchEnd - yOffsetOnTouchStart).toString();
+        $('input:text[name=Offset]').val($('input:text[name=Offset]').val() + (yOffsetOnTouchEnd - yOffsetOnTouchStart).toString());
       }
 
 
