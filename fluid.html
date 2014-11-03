@@ -52,8 +52,8 @@
   <body>
     <form id='myForm' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
       Name: <input style='display:' type="text" name="Name" value=''>
-      <input style='display:none' type="text" name="TimeConsuming" value=''>
-      <input type="button" onClick='' value="Start">
+      <input style='display:none' type="text" id="timeConsuming">
+      <input type="button" value="Start" onClick="timedCount()">
 
       <div class="container" align='center'>
         <h3 class="page-header">Task1</h3>
@@ -70,8 +70,6 @@
     </form>
 
     <form>
-      <input type="button" value="Start count!" onClick="timedCount()">
-      <input type="text" id="txt">
       <input type="button" value="Stop count!" onClick="stopCount()">
     </form>
 
@@ -93,17 +91,13 @@
 
       function timedCount()
       {
-        document.getElementById('txt').value=c;
+        document.getElementById('timeConsuming').value=c;
         c=c+1;
         t=setTimeout("timedCount()",1000);
       }
 
-      function stopCount()
-      {
-        clearTimeout(t);
-      }
-
       function submitResult() {
+        clearTimeout(t);
         $('#myForm')[0].action += '?subject=hihi';
         $("#myForm").submit();
       }
