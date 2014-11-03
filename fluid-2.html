@@ -22,12 +22,12 @@
   </head>
 
   <body>
-    <form id='myForm' align='center' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
+    <form id='myForm'  style='margin-top:20px;margin-bottom:20px;' align='center' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
       Name: <input style='display:' type="text" name="Name" value=''>
       <input style='display:none' type="text" name="Time Consuming" id="timeConsuming">
       <input style='display:none' type="text" name="Touch Times" id="touchtimes">
       <input style='display:none' type='text' name='Offset' id='offsetLogs'>
-      <input style='margin-top:20px' class='btn btn-primary' type="button" value="Start" onClick="taskStart()">
+      <input class='btn btn-primary' type="button" value="Start" onClick="taskStart()">
 
       <div id='start-alert' class="alert alert-info" role="alert" style='display:none;margin-bottom:0px;font-size:10px'>Your task starts NOW. Please start to read the article.</div>
       <div id='container' class="container" align='center' style='margin-top:35px'>
@@ -41,7 +41,7 @@
         "The year that Lincoln was in Denton Offutt's store was one of great advance. He had made new and valuable acquaintances, read many books, won multitudes of friends, and become ready for a step further in advance. Those who could appreciate brains respected him, and those whose ideas of a man related to his muscles were devoted to him. It was while he was performing the work of the store that he acquired the nickname, 'Honest Abe'娗 characterization that he never dishonored, that he never outgrew. He was everybody's friend, the best-natured, the most sensible, the best-informed, the most modest and unassuming, the kindest, gentlest, roughest, strongest, best fellow in all New Salem and the region round about."
         </p>
       </div> <!-- /container -->
-      <input style='margin-bottom:20px' class='btn btn-primary btn-lg' type="button" onclick='submitResult();' value="End">
+      <input class='btn btn-primary btn-lg' type="button" onclick='submitResult();' value="End">
     </form>
 
     <!-- Site footer -->
