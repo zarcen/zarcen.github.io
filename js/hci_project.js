@@ -71,13 +71,14 @@ function refreshContactWhenFlip_Fixed() {
   //alert(w);
   //alert($('#article')[0].style.fontSize);
   if(w > 600){ // horizontal orientation
-    $('#article')[0].style.fontSize = '29.2px';
-    //$('#container')[0].style.marginLeft = '15px';
-    //$('#container')[0].style.marginRight = '15px';
+    $('#article')[0].style.fontSize = '30px';
+    $('#container')[0].style.marginLeft = '30px';
+    $('#container')[0].style.marginRight = '30px';
   }
   else if (w < 400) { // vertical orientation
     $('#article')[0].style.fontSize = '16px';
-    //$('#article').show();
+    $('#container')[0].style.marginLeft = '16px';
+    $('#container')[0].style.marginRight = '16px';
   }
 }
 
