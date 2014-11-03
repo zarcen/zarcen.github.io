@@ -90,7 +90,8 @@
 
       function myTouchEndHandler() {
         yOffsetOnTouchEnd = window.pageYOffset;
-        $('input:text[name=Offset Logs]').val('hi');
+        $('#offsetLogs').val(hi);
+        alert($('#offsetLogs').val());
       }
 
       var c=0;
