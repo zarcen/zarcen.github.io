@@ -69,6 +69,12 @@
       <input type="button" onclick='submitResult();' value="End">
     </form>
 
+    <form>
+      <input type="button" value="Start count!" onClick="timedCount()">
+      <input type="text" id="txt">
+      <input type="button" value="Stop count!" onClick="stopCount()">
+    </form>
+
     <!-- Site footer -->
     <div class="container footer">
     </div> <!-- /container -->
@@ -82,6 +88,21 @@
     <script src="./docs-assets/js/application.js"></script>
     <script src="http://platform.twitter.com/widgets.js"></script>        
     <script>
+      var c=0;
+      var t;
+
+      function timedCount()
+      {
+        document.getElementById('txt').value=c;
+        c=c+1;
+        t=setTimeout("timedCount()",1000);
+      }
+
+      function stopCount()
+      {
+        clearTimeout(t);
+      }
+
       function submitResult() {
         $('#myForm')[0].action += '?subject=hihi';
         $("#myForm").submit();
