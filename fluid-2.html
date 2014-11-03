@@ -68,7 +68,12 @@
 
       function myTouchEndHandler() {
         yOffsetOnTouchEnd = window.pageYOffset;
-        offset_arr.push(yOffsetOnTouchEnd - yOffsetOnTouchStart);
+        if(yOffsetOnTouchEnd - yOffsetOnTouchStart != 0) {
+          offset_arr.push(yOffsetOnTouchEnd - yOffsetOnTouchStart);
+        }
+        else {
+          touchtimes-=1;
+        }
       }
 
 
@@ -84,7 +89,6 @@
         document.ontouchend = myTouchEndHandler;
         $('#start-alert')[0].style.display = 'block';
         $('#container')[0].style.marginTop = '0px';
-        //window.scrollTo(0, 1);
         scrollTo('#container');
 
       }
