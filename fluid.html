@@ -54,6 +54,7 @@
       Name: <input style='display:' type="text" name="Name" value=''>
       <input style='display:none' type="text" name="Time Consuming" id="timeConsuming">
       <input style='display:none' type="text" name="Touch Times" id="touchtimes">
+      <div>Test</div>
       <input type="button" value="Start" onClick="timedCount()">
 
       <div class="container" align='center'>
@@ -84,9 +85,20 @@
     <script src="http://platform.twitter.com/widgets.js"></script>        
     <script>
       var touchtimes = 0;
-      document.ontouchstart = myClickHandler;
+      var yOffsetOnTouchStart;
+      var yOffsetOnTouchEnd;
+
+      document.ontouchstart = myTouchStartHandler;
+      document.ontouchend = myTouchEndHandler;
       
-      function myClickHandler() {
+      function myTouchStartHandler() {
+        yOffsetOnTouchStart = window.pageYOffset;
+        touchtimes+=1;
+        //alert(clicktimes);
+      }
+
+      function myTouchEndHandler() {
+        yOffsetOnTouchEnd = window.pageYOffset;
         touchtimes+=1;
         //alert(clicktimes);
       }
