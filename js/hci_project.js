@@ -60,9 +60,13 @@ function refreshContactWhenFlip_Fluid() {
   //alert($('#article')[0].style.fontSize);
   if(w > 600){ // horizontal orientation
     $('#article')[0].style.fontSize = '16px';
+    $('#container')[0].style.marginLeft = '16px';
+    $('#container')[0].style.marginRight = '16px';
   }
   else if (w < 400) { // vertical orientation
     $('#article')[0].style.fontSize = '16px';
+    $('#container')[0].style.marginLeft = '16px';
+    $('#container')[0].style.marginRight = '16px';
     //$('#article').show();
   }
 }
