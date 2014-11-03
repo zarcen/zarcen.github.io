@@ -83,7 +83,7 @@
         document.ontouchstart = myTouchStartHandler;
         document.ontouchend = myTouchEndHandler;
         $('#start-alert')[0].style.display = 'block';
-        $('.container')[0].style.marginTop = '0px';
+        $('#container')[0].style.marginTop = '0px';
         //window.scrollTo(0, 1);
         scrollTo('#container');
 
@@ -125,7 +125,7 @@
       });
 
       function scrollTo(tar_id) {
-        $("body").scrollTop($(tar_id).offset().top - 75);
+        $("body").scrollTop($(tar_id).offset().top - 40);
       }
 
       $("body").scrollTop(0);
