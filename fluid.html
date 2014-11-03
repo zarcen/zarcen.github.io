@@ -50,7 +50,7 @@
   </head>
 
   <body>
-    <form action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
+    <form id='form' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
       <input type="text" name="FirstName" value='zarcen'>
       <input type="text" name="Email" value='zarcen@gmail.com'>
       <input id='submit' type="submit" name="submit" value="Submit">
@@ -83,7 +83,7 @@
     <script src="http://platform.twitter.com/widgets.js"></script>        
     <script>
       function sendToEmail() {
-        $('form').submit();
+        $('#form').submit();
         alert(window.screen.width);
         return; 
       }
