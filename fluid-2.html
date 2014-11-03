@@ -30,7 +30,7 @@
       <input class='btn btn-primary' type="button" value="Start" onClick="taskStart()">
 
       <div id='start-alert' class="alert alert-info" role="alert" style='display:none;font-size:10px'>Your task starts NOW.<br>Please start to read the article.</div>
-      <div class="container" align='center' style='margin-top:40px'>
+      <div class="container" align='center' style='margin-top:50px'>
         <p class="context" id="article" style="font-size:14px" align="justify">  
         This history tells about what happened while Abe Lincoln had a job working in a 
         store in a small town. Every day people came and bought things they needed there. It was a frontier community. People did not have any extra money to spare. This story tells you about his character. As you read, think about the traits he shows by what he does.
@@ -83,6 +83,7 @@
         document.ontouchstart = myTouchStartHandler;
         document.ontouchend = myTouchEndHandler;
         $('#start-alert')[0].style.display = 'block';
+        $('.container')[0].style.marginTop = '0px;
         window.scrollTo(0, 1);
 
       }
