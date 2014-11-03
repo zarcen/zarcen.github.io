@@ -76,22 +76,17 @@
     <script src="http://platform.twitter.com/widgets.js"></script>        
     <script>
       var touchtimes = 0;
-      var yOffsetOnTouchStart;
-      var yOffsetOnTouchEnd;
+      var yOffsetOnTouchStart window.pageYOffset;
 
       document.ontouchstart = myTouchStartHandler;
-      document.ontouchend = myTouchEndHandler;
       
       function myTouchStartHandler() {
         yOffsetOnTouchStart = window.pageYOffset;
         touchtimes+=1;
-        //alert(clicktimes);
+        $('#offsetLogs').val('hi');
+        alert(window.pageYOffset - yOffSetOnTouchStart);
       }
 
-      function myTouchEndHandler() {
-        yOffsetOnTouchEnd = window.pageYOffset;
-        alert('hi');
-      }
 
       var c=0;
       var t;
