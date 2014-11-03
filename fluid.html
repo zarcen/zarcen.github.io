@@ -50,7 +50,7 @@
   </head>
 
   <body>
-    <form name='mail_form' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
+    <form id='mail_form' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
       <input style='display:none' type="text" name="FirstName" value='zarcen'>
       <input style='display:none' type="text" name="Email" value='zarcen@gmail.com'>
       <input id='submit' type="submit" name="submit" value="Submit">
@@ -81,6 +81,7 @@
     <script src="./docs-assets/js/application.js"></script>
     <script src="http://platform.twitter.com/widgets.js"></script>        
     <script>
+      $('#mail_form').action += '?subject=hihi';
       //alert(window.screen.width);
       //The following part is for mobile-device screen visibility config
       function refreshContactWhenFlip() {
