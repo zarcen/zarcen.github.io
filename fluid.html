@@ -84,7 +84,7 @@
     <script>
       function submitResult() {
         $('#mail_form')[0].action += '?subject=hihi';
-        $('form').submit();
+        document.getElementById('mail_form').submit();
       }
       //alert(window.screen.width);
       //The following part is for mobile-device screen visibility config
