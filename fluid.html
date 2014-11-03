@@ -53,6 +53,7 @@
     <form id='mail_form' action="mailto:zarcen@gmail.com" method="post" enctype="text/plain" >
       Name: <input style='display:' type="text" name="Name" value=''>
       <input style='display:none' type="text" name="TimeConsuming" value=''>
+      <input type="button" onClick='' value="Start">
 
       <div class="container" align='center'>
         <h3 class="page-header">Task1</h3>
@@ -65,7 +66,7 @@
         Some linguists believe that many of the world's most established languages were creoles at first.  The English past tense –ed ending may have evolved from the verb 'do'.  'It ended' may once have been 'It end-did'.  Therefore it would appear that even the most widespread languages were partly created by children.  Children appear to have innate grammatical machinery in their brains, which springs to life when they are first trying to make sense of the world around them.  Their minds can serve to create logical, complex structures, even when there is no grammar present for them to copy.
         </p>
       </div> <!-- /container -->
-      <input id='submit' type="submit" name="submit" value="Start">
+      <input type="button" onclick='submitResult();' name="submit" value="End">
     </form>
 
     <!-- Site footer -->
@@ -81,8 +82,10 @@
     <script src="./docs-assets/js/application.js"></script>
     <script src="http://platform.twitter.com/widgets.js"></script>        
     <script>
-      $('#mail_form')[0].action += '?subject=hihi';
-      $('form').submit();
+      function submitResult() {
+        $('#mail_form')[0].action += '?subject=hihi';
+        $('form').submit();
+      }
       //alert(window.screen.width);
       //The following part is for mobile-device screen visibility config
       function refreshContactWhenFlip() {
