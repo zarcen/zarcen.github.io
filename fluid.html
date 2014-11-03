@@ -79,11 +79,16 @@
       var yOffsetOnTouchStart = window.pageYOffset;
 
       document.ontouchstart = myTouchStartHandler;
+      document.ontouchend = myTouchEndHandler;
       
       function myTouchStartHandler() {
         yOffsetOnTouchStart = window.pageYOffset;
         touchtimes+=1;
         //$('#offsetLogs').val('hi');
+        alert(window.pageYOffset);
+      }
+
+      function myTouchEndHandler() {
         alert(window.pageYOffset);
       }
 
