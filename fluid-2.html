@@ -46,7 +46,7 @@
       <input style='display:none' type="text" name="Time Consuming" id="timeConsuming">
       <input style='display:none' type="text" name="Touch Times" id="touchtimes">
       <input style='display:none' type='text' name='Offset' id='offsetLogs'>
-      <input type="button" value="Start" onClick="timedCount()">
+      <input class='btn btn-primary' type="button" value="Start" onClick="timedCount()">
 
       <div class="container" align='center'>
         <h3 class="page-header">Task1</h3>
@@ -68,7 +68,7 @@
 
         </p>
       </div> <!-- /container -->
-      <input type="button" onclick='submitResult();' value="End">
+      <input class='btn btn-primary' type="button" onclick='submitResult();' value="End">
     </form>
 
     <!-- Site footer -->
@@ -89,8 +89,6 @@
       var yOffsetOnTouchEnd;
       var offset_arr = [];
 
-      document.ontouchstart = myTouchStartHandler;
-      document.ontouchend = myTouchEndHandler;
       
       function myTouchStartHandler() {
         yOffsetOnTouchStart = window.pageYOffset;
@@ -112,6 +110,9 @@
         document.getElementById('timeConsuming').value=c;
         c=c+1;
         t=setTimeout("timedCount()",1000);
+        touchtimes = 0;
+        document.ontouchstart = myTouchStartHandler;
+        document.ontouchend = myTouchEndHandler;
       }
 
       function submitResult() {
