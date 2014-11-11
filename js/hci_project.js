@@ -4,6 +4,58 @@ var yOffsetOnTouchStart;
 var yOffsetOnTouchEnd;
 var offset_arr = [];
 
+function taskSelect() {
+  var pid = $(".1-32").val();
+  if ( pid % 16 == 1 ) {
+    window.location = "http://zarcen.github.io/fixed.html";
+  }
+  else if ( pid % 16 == 2 ) {
+    window.location = "http://zarcen.github.io/fixed2.html";
+  }
+  else if ( pid % 16 == 3 ) {
+    window.location = "http://zarcen.github.io/fixed.html";
+  }
+  else if ( pid % 16 == 4 ) {
+    window.location = "http://zarcen.github.io/fixed2.html";
+  }
+  else if ( pid % 16 == 5 ) {
+    window.location = "http://zarcen.github.io/fixed.html";
+  }
+  else if ( pid % 16 == 6 ) {
+    window.location = "http://zarcen.github.io/fixed2.html";
+  }
+  else if ( pid % 16 == 7 ) {
+    window.location = "http://zarcen.github.io/fixed.html";
+  }
+  else if ( pid % 16 == 8 ) {
+    window.location = "http://zarcen.github.io/fixed2.html";
+  }
+  else if ( pid % 16 == 9 ) {
+    window.location = "http://zarcen.github.io/fluid.html";
+  }
+  else if ( pid % 16 == 10 ) {
+    window.location = "http://zarcen.github.io/fluid2.html";
+  }
+  else if ( pid % 16 == 11 ) {
+    window.location = "http://zarcen.github.io/fluid.html";
+  }
+  else if ( pid % 16 == 12 ) {
+    window.location = "http://zarcen.github.io/fluid2.html";
+  }
+  else if ( pid % 16 == 13 ) {
+    window.location = "http://zarcen.github.io/fluid.html";
+  }
+  else if ( pid % 16 == 14 ) {
+    window.location = "http://zarcen.github.io/fluid2.html";
+  }
+  else if ( pid % 16 == 15 ) {
+    window.location = "http://zarcen.github.io/fluid.html";
+  }
+  else if ( pid % 16 == 0 ) {
+    window.location = "http://zarcen.github.io/fluid2.html";
+  }
+}
+
 
 function myTouchStartHandler() {
   yOffsetOnTouchStart = window.pageYOffset;

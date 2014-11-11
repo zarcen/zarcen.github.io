@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="./favicon.png" sizes="64*64" />
+    <!-- IE -->
+    <link rel="SHORTCUT ICON" href="./favicon.png" />
+    <!-- mozilla -->
+    <link rel="icon" href="favicon.png" type="image/ico" /> 
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap.min.css" rel="stylesheet" /> 
+    <!-- Bootstrap theme -->
+    <link href="./bootstrap-theme.min.css" rel="stylesheet" /> 
+
+    <title>CS770 Project Task</title>
+  </head>
+
+  <body>
+    <form id='form'  style='margin-top:20px;margin-bottom:20px;' align='center' action="" method="" enctype="text/plain" >
+      PID: <select class="1-32" form="form"></select>
+      <input class='btn btn-primary' type="button" value="Confirm" onClick="taskSelect()">
+
+      <div id='container' class="container" align='center' style='margin-top:35px'>
+      </div> <!-- /container -->
+      <input class='btn btn-primary btn-lg' type="button" onclick='submitResult("fluid1");' value="End">
+    </form>
+
+    <!-- Site footer -->
+    <div class="container footer">
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <script src="./js/hci_project.js"></script>
+    <script>
+      $(function(){
+        var $select = $(".1-32");
+        for (i=1;i<=32;i++){
+          $select.append($('<option></option>').val(i).html(i))
+        }
+      });
+
+
+
+      // execute once when load page
+      refreshContactWhenFlip_Fluid();
+      // jQuery resize event
+      $(window).resize(function() {
+        refreshContactWhenFlip_Fluid();
+      });
+    </script>
+  </body>
+</html>
