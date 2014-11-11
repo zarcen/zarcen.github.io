@@ -109,14 +109,14 @@ function timedCount() {
 }
 
 function submitResult(taskType) {
-  var name = $('input:text[name=Name]').val();
+  var pid = $('.1-32').val();
   document.getElementById('touchtimes').value=touchtimes;
   clearTimeout(t);
   $('input:text[name=Offset]').val(offset_arr.toString());
   $('input:text[name=YPos]').val(yPos_arr.toString());
   $('input:text[name=TouchOnTiming]').val(touchOnTiming.toString());
   $('input:text[name=TouchEndTiming]').val(touchEndTiming.toString());
-  $('#myForm')[0].action += '?subject=[HCI_Project]' + name + '-' + taskType;
+  $('#myForm')[0].action += '?subject=[HCI_Project] Pid=' + pid + '-' + taskType;
   $("#myForm").submit();
   $('#end_btn')[0].style.display = 'none';
   $('#end_btn')[0].onclick = null;
