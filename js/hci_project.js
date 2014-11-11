@@ -71,12 +71,13 @@ function myTouchStartHandler() {
 
 function myTouchEndHandler() {
   yOffsetOnTouchEnd = window.pageYOffset;
-  touchEndTiming.push(c);
   if(yOffsetOnTouchEnd - yOffsetOnTouchStart != 0) {
     offset_arr.push(yOffsetOnTouchEnd - yOffsetOnTouchStart);
+    touchEndTiming.push(c);
   }
   else {
     touchtimes-=1;
+    touchOnTiming.pop();
   }
 }
 
