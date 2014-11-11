@@ -38,8 +38,8 @@
       <div id='container' class="container" align='center' style='margin-top:35px'>
         <p class="context" id="article" style="font-size:14px" align="justify">  
         I am certain that my fellow Americans expect that on my induction into the Presidency 
-        I will address them with a candor and a decision which the present situation of our Nation
-        impels. This is preeminently the time to speak the truth, the whole truth, frankly and boldly. 
+        I will address them with a candor and a decision which the present situation of our Nation impels. 
+        This is preeminently the time to speak the truth, the whole truth, frankly and boldly. 
         Nor need we shrink from honestly facing conditions in our country today. 
         This great Nation will endure as it has endured, will revive and will prosper. 
         So, first of all, let me assert my firm belief that the only thing we have to fear is fear itself. 
@@ -67,8 +67,8 @@
         they have resorted to exhortations, pleading tearfully for restored confidence. 
         </p>
       </div> <!-- /container -->
-      <input class='btn btn-primary btn-lg' type="button" onclick='submitResult("fixed1");' value="End">
-      <a id='next_task_btn' style='font-size:32px;text-align:right;float:right;display:none' href='fixed2.html'>Next Task</a>
+      <input id='end_btn' class='btn btn-primary btn-lg' type="button" onclick='submitResult("fluid1");' value="End">
+      <a id='next_task_btn' style='font-size:32px;text-align:right;float:right;display:none' href='hci.html'>Thank You!</a>
     </form>
 
     <!-- Site footer -->
@@ -83,10 +83,10 @@
     <script src="./js/hci_project.js"></script>
     <script>
       // execute once when load page
-      refreshContactWhenFlip_Fixed();
+      refreshContactWhenFlip_Fluid();
       // jQuery resize event
       $(window).resize(function() {
-        refreshContactWhenFlip_Fixed();
+        refreshContactWhenFlip_Fluid();
       });
     </script>
   </body>
