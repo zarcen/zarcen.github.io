@@ -9,6 +9,13 @@ var touchEndTiming = [];
 var c=0; // timing, unit:second
 var t; // var for timer
 
+$(function(){
+  var $select = $(".1-32");
+  for (i=1;i<=32;i++){
+    $select.append($('<option></option>').val(i).html(i))
+  }
+});
+
 function taskSelect() {
   var pid = $(".1-32").val();
   if ( pid % 16 == 1 ) {
