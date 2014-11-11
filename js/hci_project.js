@@ -3,6 +3,11 @@ var touchtimes = 0;
 var yOffsetOnTouchStart;
 var yOffsetOnTouchEnd;
 var offset_arr = [];
+var yPos_arr = [];
+var touchOnTiming = [];
+var touchEndTiming = [];
+var c=0; // timing, unit:second
+var t; // var for timer
 
 function taskSelect() {
   var pid = $(".1-32").val();
@@ -60,11 +65,13 @@ function taskSelect() {
 function myTouchStartHandler() {
   yOffsetOnTouchStart = window.pageYOffset;
   touchtimes+=1;
+  touchOnTiming.push(c);
   //$('#offsetLogs').val('hi');
 }
 
 function myTouchEndHandler() {
   yOffsetOnTouchEnd = window.pageYOffset;
+  touchEndTiming.push(c);
   if(yOffsetOnTouchEnd - yOffsetOnTouchStart != 0) {
     offset_arr.push(yOffsetOnTouchEnd - yOffsetOnTouchStart);
   }
@@ -72,10 +79,6 @@ function myTouchEndHandler() {
     touchtimes-=1;
   }
 }
-
-
-var c=0;
-var t;
 
 function taskStart() {
   document.getElementById('timeConsuming').value=c;
@@ -93,6 +96,7 @@ function taskStart() {
 function timedCount() {
   document.getElementById('timeConsuming').value=c;
   c=c+1;
+  yPos_arr.push(window.pageYOffset);
   t=setTimeout("timedCount()",1000);
 }
 
@@ -101,6 +105,9 @@ function submitResult(taskType) {
   document.getElementById('touchtimes').value=touchtimes;
   clearTimeout(t);
   $('input:text[name=Offset]').val(offset_arr.toString());
+  $('input:text[name=YPos]').val(yPos_arr.toString());
+  $('input:text[name=TouchOnTiming]').val(touchOnTiming.toString());
+  $('input:text[name=TouchEndTiming]').val(touchEndTiming.toString());
   $('#myForm')[0].action += '?subject=[HCI_Project]' + name + '-' + taskType;
   $("#myForm").submit();
 }
