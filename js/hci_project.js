@@ -111,8 +111,7 @@ function submitResult(taskType) {
   $('input:text[name=TouchEndTiming]').val(touchEndTiming.toString());
   $('#myForm')[0].action += '?subject=[HCI_Project]' + name + '-' + taskType;
   $("#myForm").submit();
-  var end_btn = $('#end_btn')[0];
-  delete end_btn;
+  $('#end_btn')[0].style.display = 'none';
   $('#next_task_btn')[0].style.display = 'block';
 }
 //alert(window.screen.width);
