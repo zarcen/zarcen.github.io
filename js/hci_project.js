@@ -112,6 +112,7 @@ function submitResult(taskType) {
   $('#myForm')[0].action += '?subject=[HCI_Project]' + name + '-' + taskType;
   $("#myForm").submit();
   $('#end_btn')[0].style.display = 'none';
+  $('#end_btn')[0].onclick = null;
   $('#next_task_btn')[0].style.display = 'block';
 }
 //alert(window.screen.width);
