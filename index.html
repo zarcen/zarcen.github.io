@@ -47,17 +47,6 @@
       }
     </style>
 
-    <!-- Google Analysis -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-45406933-1', 'zarcen.github.io');
-      ga('send', 'pageview');
-
-    </script>
   </head>
 
   <body>
@@ -77,7 +66,7 @@
           <ul class="nav navbar-nav">
             <li><a href="#about" data-toggle="tab">About</a></li>
             <li><a id="nav_portfolio" href="#portfolio" data-toggle="tab">Portfolio</a></li>
-            <li><a href="#cv" data-toggle="tab">CV/Resume</a></li>
+            <li><a href="#resume" data-toggle="tab">Resume</a></li>
             <li id="visible-contact-cellphone" style="display:value"><a href="#contact" data-toggle="tab">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -98,32 +87,10 @@
                 </div>
                 <p class="context">
                 Wei-Chen Chen (nickname, Zarcen).
-                I am currently studying in <a target="_blank" href="http://cs.wisc.edu">
-                Computer Sciences Dept. in University of Wisconsin-Madison</a>
-                as a graduate student; meanwhile, working as a research assistant supervised by 
-                <a target="_blank" href="http://pages.cs.wisc.edu/~gleicher/">
-                Dr. Michael Gleicher</a> in <a target="_blank" href="http://graphics.cs.wisc.edu/WP/">Vis Lab</a>.
-                </p>
                 <p class="context">
-                I enjoy developing systems or software which could highly influence daily lives.
-                Aside from <a target="_blank" href="http://graphics.cs.wisc.edu/Research/">
-                Data Visualization</a> that I'm studying with <a target="_blank" href="http://pages.cs.wisc.edu/~gleicher/">
-                Dr. Michael Gleicher</a>,
-                my broad interests include web application development, machine learning, and ubiquitous computing.
-                </p>
-                <p class="context">
-                I received my B.S. in computer science from 
-                <a target="_blank" href="http://www.csie.ntu.edu.tw/main.php">National Taiwan University</a> in 2011.
-                I worked in Smart Home Group of NTU Intelligent Robot Lab and been supervised by
-                <a target="_blank" href="http://robotlab.csie.ntu.edu.tw/doku.php?id=%E5%82%85%E7%AB%8B%E6%88%90">
-                Prof. Li-Chen Fu</a> 
-                from 2010 to 2011. And involved in IoT and M2M research project as a research assistant in 
-                <a target="_blank" href="http://ccc.ntu.edu.tw/"> Intel-NTU Center</a> between 2012 and 2014.
-                </p>
-                <p class="context">
-                For more detailed information, please check the 
+                Please check the 
                 <a target="_blank" href="https://tw.linkedin.com/in/zarcen">Linkedin page</a> 
-                or my <a href="#cv" data-toggle="tab">CV/Resume</a>
+                or my <a href="#resume" data-toggle="tab">Resume</a>
                 </p>
                 </br>
                 </br>
@@ -147,7 +114,7 @@
               <div class="col-md-3">
                 <div class="bs-sidenav affix" style="width:180px">
                   <ul class="nav">
-                    <a class="brand" onclick='scrollTo("#work_in_progress")'>&nbsp;<b>Work in Progress</b></a>
+                    <a class="brand" onclick='scrollTo("#past_research_projects")'>&nbsp;<b>Past Research Projects</b></a>
                     <li><a onclick='scrollTo("#mchess");'>M-CHESS</a></li>
                     <a class="brand" onclick='scrollTo("#undergraduate_project")'>&nbsp;<b>Undergraduate Projects</b></a>
                     <li><a onclick='scrollTo("#glidingzhuyin");'>Glideing Zhuyin</a></li>
@@ -159,8 +126,8 @@
               </div><!-- /.col-md-3 -->
               <div class="col-md-9">
                 <!-- working -->
-                <div class="alert alert-info" id="work_in_progress">
-                  <h3><strong>Work in Progress </strong><small>@ National Taiwan University</small></h3>
+                <div class="alert alert-info" id="past_research_projects">
+                  <h3><strong>Past Research Projects </strong><small>@ Intel-NTU CCC Center</small></h3>
                 </div>
                 <div class="page-header" id="mchess">
                   <h3>M-CHESS <small>(2012-present)</small></h3>
@@ -186,10 +153,6 @@
                 System (M-CHESS). The goal of M-CHESS is to optimize context-aware home energy saving and to 
                 minimize user's interventions in the determination of ES policies while maintaining the best user 
                 comfort requirements through employment of the M2M infrastructure.
-                </p>
-                <p>
-                Links:&nbsp;
-                <a target="_blank" href="http://ccc.ntu.edu.tw/index.php/en/research/project/HomeEnergy"><button type="button" class="btn btn-sm btn-primary">Project Page</button></a>
                 </p>
                 </br>
                 </br>
@@ -279,12 +242,12 @@
           </div> <!-- portfolio tab page-->
 
           <!-- CV tab page -->
-          <div class="tab-pane fade" id="cv"> 
+          <div class="tab-pane fade" id="resume"> 
             <div class="row">
               <div class="col-md-3">
                 <div class="bs-sidenav affix" style="width:180px">
                   <ul class="nav">
-                    <li><a onclick='scrollTo("#pdf_resume");'>PDF CV/Resume</a></li>
+                    <li><a onclick='scrollTo("#pdf_resume");'>Resume</a></li>
                     <li><a onclick='scrollTo("#education");'> Education</a></li>
                     <li><a onclick='scrollTo("#publications");'>Publications</a></li>
                     <li><a onclick='scrollTo("#experience");'>Experience</a></li>
@@ -298,21 +261,14 @@
                   <h3>Resume</h3>
                 </div>
                 <dl class="dl-horizontal">
-                  <dd><a target="_blank" href="./resume.pdf"><button type="button" class="btn btn-sm btn-info">Full Resume (PDF)</button></a></dd>
-                </dl>
-                <div id="pdf_cv" class="page-header">
-
-                  <h3>Curriculum Vitae</h3>
-                </div>
-                <dl class="dl-horizontal">
-                  <dd><a target="_blank" href="./cv.pdf"><button type="button" class="btn btn-sm btn-info">Full CV (PDF)</button></a></dd>
+                  <dd><a target="_blank" href="/resume/resume.pdf"><button type="button" class="btn btn-sm btn-info">Resume (PDF)</button></a></dd>
                 </dl>
 
                 <div id="education" class="page-header">
                   <h3>Education</h3>
                 </div>
                 <dl class="dl-horizontal">
-                  <dt><em>2014 ~ 2016(expected)</em></dt>
+                  <dt><em>2014 ~ 2016</em></dt>
                   <dd>University of Wisconsin-Madison, US</dd>
                   <dd><small>Master of Science, Computer Sciences</small></dd>
                 </dl>
@@ -325,6 +281,13 @@
                 <div id="publications" class="page-header">
                   <h3>Publications</h3>
                 </div>
+                <dl class="dl-horizontal">
+                  <dt><em>2015</em></dt>
+                  <dd>
+		  Ching-Hu Lu, Chao-Lin Wu, Mao-Yuan Weng, <u>Wei-Chen Chen</u>, and Li-Chen Fu
+                  <b>“Context-Aware Energy Saving System with Multiple Comfort-Constrained Optimization in M2M-based Home Environment”</b><i>, IEEE Transactions on Automation Science and Engineering, vol.PP, no.99, pp.1, 2015</i>
+                  </dd>
+                </dl>
                 <dl class="dl-horizontal">
                   <dt><em>2014</em></dt>
                   <dd>
@@ -344,16 +307,34 @@
                   <h3>Experience</h3>
                 </div>
                 <dl class="dl-horizontal">
-                  <dt><em>2014 ~ present</em></dt>
-                  <dd><b>Teaching Assistant</b></dd>
-                  <dd>Dept. of Computer Sciences in UW-Madison, Madison, US</dd>
-                  <dd>Courses: CS302 Java Programming, CS367 Data Structure</dd>
+                  <dt><em>2020 ~ 2021</em></dt>
+                  <dd><b>System Software Engineer</b></dd>
+                  <dd>Devicebook, Bellevue, WA, US</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt><em>2016 ~ 2020</em></dt>
+                  <dd><b>Software Engineer II</b></dd>
+                  <dd>Microsoft, Redmond, WA, US</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt><em>2016 ~ 2020</em></dt>
+                  <dd><b>Software Engineer II</b></dd>
+                  <dd>Microsoft, Redmond, WA, US</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt><em>Summer 2015</em></dt>
+                  <dd><b>Software Engineer Intern</b></dd>
+                  <dd>Google, Mountain View, CA, US</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt><em>2014 ~ 2016</em></dt>
+                  <dd><b>Teaching Assistant and Research Assistant</b></dd>
+                  <dd>Dept. of Computer Sciences in UW-Madison, Madison, WI, US</dd>
                 </dl>
                 <dl class="dl-horizontal">
                   <dt><em>2012 ~ 2014</em></dt>
                   <dd><b>Research Assistant</b></dd>
                   <dd>Intel-NTU Connected Context Computing Center, Taipei, Taiwan</dd> 
-                  <dd>Advisor: Prof. Li-Chen Fu</dd>
                 </dl>
                 <dl class="dl-horizontal">
                   <dt><em>2011 ~ 2012</em></dt>
@@ -373,19 +354,13 @@
                 </div>
                 <dl class="dl-horizontal">
                   <dt><em>Programming</em></dt>
-                  <dd>C, C++, Java, Python, Ruby</dd>
+                  <dd>C, C++, C#, Java, Python, Ruby, Rust</dd>
                 </dl>
                 <dl class="dl-horizontal">
                   <dt><em>Web</em></dt>
                   <dd>Javascript and its various frameworks, HTML/CSS</dd>
                 </dl>
 
-                <div id="research_projects" class="page-header">
-                  <h3>Research Projects</h3>
-                </div>
-                <dl class="dl-horizontal">
-                  <dd><a onclick='$("#nav_portfolio").click();'><button type="button" class="btn btn-sm btn-info">More in portfolio</button></a></dd>
-                </dl>
               </div> <!-- col-md-9 -->
             </div> <!-- row -->
           </div> <!-- CV tab page end -->
@@ -398,8 +373,7 @@
                   </div>
                   <div class="panel-body">
                     <p align="center"><img src="./image/profile2.png" class="img-thumbnail" alt="Wei Chen Photo" height="200" width="150"></p>
-                    <p align="center">Email: zarcen [at] cs.wisc.edu&nbsp;<a href="mailto:zarcen@cs.wisc.edu"><img alt="mailtome" src="./image/email.jpeg" width=30 height=30></a></p>
-                    <p align="center">Skype: zarcenchen&nbsp;<img alt="skype" src="./image/skype.jpeg" width=30 height=30></p>
+		    <p align="center">Email: zarcen [at] gmail (anti-crawl &#128523;))&nbsp;<img alt="mailtome" src="./image/email.jpeg" width=30 height=30></p>
                     <p align="center">Linkedin: zarcen&nbsp;<a target="_blank" href="https://tw.linkedin.com/in/zarcen"><img alt="linkedin" src="./image/linkedin.png" width=30 height=30></a></p>
                     <p align="center">Github Repos: zarcen&nbsp;<a target="_blank" href="https://github.com/zarcen"><img alt="github" src="./image/github.png" width=30 height=30></a></p>
                   </div>
@@ -430,7 +404,7 @@
     <!-- Site footer -->
     <div class="container footer">
       <span style="float:left;color:#008000">&copy; Zarcen Chen</span>
-      <span style="float:right;color:#008000">Last updated: 2015-1-23</span>
+      <span style="float:right;color:#008000">Last updated: 2021-9-23</span>
     </div> <!-- /container -->
 
     <!-- Bootstrap core JavaScript
